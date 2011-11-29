@@ -5,6 +5,7 @@
 
 ## Example
 
+```javascript
 var target = dolce({
 	
 	/**
@@ -30,5 +31,4 @@ var target = dolce({
 target.getAccount({ user: 'user', pass: 'pass'}, function(err, result) {
 	
 });
-
-
+```
