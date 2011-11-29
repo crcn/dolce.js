@@ -1,34 +1,31 @@
-## Syntactic sugar for javascript functions
-
-### Motification
-
-
-## Example
 
 ```javascript
-var target = dolce({
+
+var dolce = require('dolce');
+
+
+var api = dolce({
 	
 	/**
 	 */
+	 
+	'authorize': function(credits, callback) {
+		if(credits.user != 'user' || credits.pass != 'hello') throw new Error('Unauthorized');
 
-	'authorize': function(ops) {
-		if(ops.user != 'user' && pass != 'pass') throw new Error('incorrect username / password');
-
-		if(!this.next({ user: })) {
-			
-		}
+		if(!this.next()) callback();
 	},
 
 	/**
 	 */
 
-	'authorize -> getAccount': function(ops) {
-		this.callback()
+	'authorize -> getAccountInfo': function(credits, callback) {
+		callback(false, 'success!');
 	}
 });
 
 
-target.getAccount({ user: 'user', pass: 'pass'}, function(err, result) {
+api.getAcountInfo({ user: 'user', pass: 'pass' }, function() {
 	
 });
+
 ```
