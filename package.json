@@ -8,7 +8,10 @@
   "engines": {
     "node": "*"
   },
-  "dependencies": {},
+  "dependencies": {
+    "crema":"*",
+    "step":"*"
+  },
   "devDependencies": {},
   "main": "./lib/index.js",
   "author": "Craig Condon"
