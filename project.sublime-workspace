@@ -24,21 +24,34 @@
 			}
 		},
 		{
-			"contents": "{\n  \"name\": \"dolce\",\n  \"description\": \"flow-control library\",\n  \"version\": \"0.0.1\",\n  \"repository\": {\n    \"url\": \"\"\n  },\n  \"engines\": {\n    \"node\": \"*\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {},\n  \"main\": \"./lib/index.js\",\n  \"author\": \"Craig Condon\"\n}\n",
 			"file": "package.json",
-			"file_size": 261,
-			"file_write_time": 1322553739000000,
 			"settings":
 			{
-				"buffer_size": 261,
+				"buffer_size": 296,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/tmp/subl stdin aG3sgI.txt",
+			"file": "/tmp/subl stdin 3x9YDO.txt",
 			"settings":
 			{
 				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/index.js",
+			"settings":
+			{
+				"buffer_size": 863,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "examples/timeout.js",
+			"settings":
+			{
+				"buffer_size": 502,
 				"line_ending": "Unix"
 			}
 		}
@@ -174,7 +187,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -235,15 +248,15 @@
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 261,
+						"buffer_size": 296,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								39,
-								39
+								207,
+								207
 							]
 						],
 						"settings":
@@ -260,7 +273,7 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/tmp/subl stdin aG3sgI.txt",
+					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -277,6 +290,58 @@
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "lib/index.js",
+					"settings":
+					{
+						"buffer_size": 863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								775,
+								775
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "examples/timeout.js",
+					"settings":
+					{
+						"buffer_size": 502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								255
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
