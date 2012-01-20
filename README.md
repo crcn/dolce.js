@@ -28,7 +28,7 @@ router.on({
 
 	'validateLogin -> postMessage': function(ops) {
 
-		return 'You posted "%s".', ops.data.message;
+		return 'You posted "%s".' + ops.data.message;
 
 	}
 });
