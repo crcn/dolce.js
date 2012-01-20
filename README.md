@@ -1,5 +1,5 @@
 
-Dolce is a super sweet routing framework for javascript.
+Dolce is a super sweet routing framework for javascript. [![Build Status](https://secure.travis-ci.org/crcn/dolce.png)](https://secure.travis-ci.org/crcn/dolce)
 
 
 Basic Example:
