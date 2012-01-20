@@ -167,11 +167,19 @@ Implicit middleware allows you to inject routes without explicitly defining them
 
 ```javascript
 router.on({
+
+	/**
+	 * invite check route. This will be removed once the application is out of alpha
+	 */
 	
 	'signup/*': function() {
 		
 		//check if the account is invited
 	},
+
+	/**
+	 * signs the user up
+	 */
 
 	'signup': function() {
 		
