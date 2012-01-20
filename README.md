@@ -145,8 +145,16 @@ router.on({
 	 * returns whether an account exists
 	 */
 
-	'account/exists': function() {
+	'account/exists': function(ops) {
 		
+		var self = this;
+
+		userExists(ops.user, function(yes) {
+			
+			if(yes) return self.error('User already exists');
+
+			self.next();
+		})
 	},
 
 	/**
@@ -154,7 +162,7 @@ router.on({
 	 */
 
 	'account/exists -> signup': function() {
-		
+		//sign up user
 	}
 });
 ```
