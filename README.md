@@ -159,6 +159,22 @@ router.on({
 });
 ```
 
+Another good use case for explicit middleware is parsing cookies, or post data, so not *every* request is checked. Like so:
+
+```javascript
+router.on({
+	
+	/**
+	 */
+
+	'parseBody -> parseCookies -> signup': function(ops) {
+
+		//do stuff
+		console.log(ops.body);
+	}
+});
+```
+
 ## Implicit Middleware
 
 Implicit middleware allows you to inject routes without explicitly defining them. For example:
