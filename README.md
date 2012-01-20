@@ -70,7 +70,7 @@ TODO
 
 ## Regular Routes
 
-```
+```javascript
 
 router.on({
 	
@@ -94,6 +94,7 @@ router.on({
 
 Tags are filterable items you can attach to your routes. For example:
 
+```javascript
 
 router.on({
 	
