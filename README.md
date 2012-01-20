@@ -202,8 +202,8 @@ router.on({
 
 I typically drop implicit middleware in separate files, and load load them in as plugins which can be taken out without breaking the app. The plugin above might be separated as such:
 
-`plugins/auth/signup.js` - plugin which signs the user up.
-`plugins/auth/beta_signup.js` - drop-in plugin that checks if a user can signup or not.
+- `plugins/auth/signup.js` - plugin which signs the user up.
+- `plugins/auth/beta_signup.js` - drop-in plugin that checks if a user can signup or not.
 
 ## Greedy Middleware
 
