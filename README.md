@@ -1,63 +1,63 @@
 
-Dolce is a sweet routing framework for javascript.
+Dolce is a super sweet routing framework for javascript.
+
+
+Basic Example:
 
 ```javascript
 
-var collection = require('dolce').collection();
+var router = require('dolce').router();
 
-
-
-collection.add({
-
-	/**
-	 * Extends the signup route. Checks if the user is invited to use the service 
-	 * (This is app is currently beta-invite only).
-	 */
-
-	'signup/*': function(ops) {
-			
-		if(!ops.signupToken) throw new Error("You have not been invited yet!");
-
-		//can signup? move onto the real deal!
-		this.next();
-	},
+router.on({
 	
 	/**
-	 * signs the user up to use the service
+	 * validates authentication credentials
 	 */
-	 
-	'signup': function(ops) {
-		
-		var self = this;
 
-		signupUser(ops.username, ops.password, function(err, result) {
-			
-			ops.success(result);
+	'validateLogin': function(ops) {
 
-		});
+		if(ops.u != 'username' && ops.p != 'password') return new Error('Invalid Login');
+
+	},
+
+	/**
+	 */
+
+	'validateLogin -> postMessage': function(ops) {
+
+		return 'You posted "%s".', ops.message;
 
 	}
 });
 
 
-collection.route('signup').call({
+// a successful dispatch
+router.dispatch('postMessage', {
 	data: {
-		username: 'craig',
-		password: '1234567890'
+		u: 'username',
+		p: 'password',
+		message: 'Hello Dolce!'
 	},
-	onError: function(err) {
-		console.log(err); //"You have not been invited yet!
-	},
-	onSuccess: function(user) {
-		
-	}, 
-	onResponse: function(err, user) {
-		
-	},
-	onReturn: function(value) {
-		
+
+	response: (err, result) {
+		console.log(result); //You posted "Hello Dolce!"
 	}
 });
+
+//an unsuccessful dispatch
+router.dispatch('postMessage', {
+	
+	data: {
+		u: 'badUsername',
+		p: 'badPassword',
+		message: 'Hello World!'
+	},
+
+	response: (err, result) {
+		console.log(err.message); //Invalid login
+	}
+});
+
 
 ```
 
@@ -75,3 +75,5 @@ collection.route('signup').call({
 ## Route Tags
 
 ## Filtering Routes
+
+# API
