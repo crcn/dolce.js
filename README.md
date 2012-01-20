@@ -159,7 +159,7 @@ router.on({
 });
 ```
 
-Another good use case for explicit middleware is parsing cookies, or post data, so not *every* request is checked. Like so:
+Here's another example:
 
 ```javascript
 router.on({
