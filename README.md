@@ -21,6 +21,7 @@ router.on({
 	},
 
 	/**
+	 * posts a new message
 	 */
 
 	'validateLogin -> postMessage': function(ops) {
@@ -33,30 +34,25 @@ router.on({
 
 // a successful dispatch
 router.dispatch('postMessage', {
-	data: {
 		u: 'username',
 		p: 'password',
 		message: 'Hello Dolce!'
 	},
-
-	response: (err, result) {
+	function (err, result) {
 		console.log(result); //You posted "Hello Dolce!"
 	}
-});
+);
 
 //an unsuccessful dispatch
 router.dispatch('postMessage', {
-	
-	data: {
 		u: 'badUsername',
 		p: 'badPassword',
 		message: 'Hello World!'
-	},
-
-	response: (err, result) {
+	},	
+	function (err, result) {
 		console.log(err.message); //Invalid login
 	}
-});
+);
 
 
 ```
