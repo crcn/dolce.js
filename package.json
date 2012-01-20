@@ -18,5 +18,9 @@
     "vows":"*"
   },
   "main": "./lib/index.js",
-  "author": "Craig Condon"
+  "author": "Craig Condon",
+  
+  "scripts": {
+      "test": "vows --spec"
+  }
 }
