@@ -15,36 +15,33 @@ test/taco
 */
 
 collection.add({
-	
-	'hello/:name/taco/:last/:cheese/help': function(ops) {
-		
-	},
-
-	'hello/craig/jefferds': function(ops) {
-		
-	},
-
-	'hello/**': function() {
-		console.log("HELLO")
-	},
-
-	':hello/**': function() {
-		
-	},
 
 	/**
 	 */
 
-	'hello/:param/**': function() {
-		console.log("CRAIG")
-	},
+	'thruAgain -> thru': function(){},
 
-	'hello/craig/taco/last/cheese/help': function() {
-		
-	}
+	/**
+	 */
+
+	'thruAgain': function(){},
+
+	/**
+	 */
+
+	'thru -> hello/**': function() {},
+
+	/**
+	 */
+	
+	'hello/:world': function() {},
+
+	/**
+	 */
+
+	'thru -> hello/:world/test': function() {}
 });
 
-var routes = collection.middleware('hello/craig/taco/last/cheesee/help');
 
-
-console.log(routes);
+console.log(collection.get('hello/world'));
+console.log(collection.get('hello/world/test'));

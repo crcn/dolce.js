@@ -66,9 +66,9 @@ collection.route('signup').call({
 
 ## Route Parameters
 
-## Route Middleware
+## Implicit Middleware
 
-## Extending Routes
+## Explicit Middleware
 
 ## Greedy Routes
 

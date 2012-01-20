@@ -1,6 +1,6 @@
 {
   "name": "dolce",
-  "description": "flow-control library",
+  "description": "Router with syntactic sugar",
   "version": "0.0.1",
   "repository": {
     "url": ""
@@ -12,7 +12,10 @@
     "crema":"*",
     "sift":"*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "benchmark":"*",
+    "colors":"*"
+  },
   "main": "./lib/index.js",
   "author": "Craig Condon"
 }
