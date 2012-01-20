@@ -122,7 +122,14 @@ router.on({
 
 });
 
-router.dispatch('users', { data: { username: 'crcn' }, tags: { method: 'POST' } }, function(err, result) {
+router.dispatch('users', { 
+	data: { 
+		username: 'crcn' 
+	}, 
+	tags: { 
+		method: 'POST' 
+	} 
+}, function(err, result) {
 	//added user
 }); 
 ```
