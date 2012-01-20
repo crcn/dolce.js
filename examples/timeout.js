@@ -1,33 +1,17 @@
-var dolce = require('../lib');
+var dolce = require('../lib'),
+collection = dolce.collection();
 
 
-var target = dolce({
-
-	/**
-	 */
-
-	'delay': function(ops, callback) {
-		console.log('delay')
-
-		setTimeout(this, 1000, ops, callback);
-	},
-
-	/**
-	 */
+collection.add({
 	
-	'delay -> timeout': function(ops, callback) {
-		console.log('timeout')
-		setTimeout(this, 1000, ops, callback);
+	'signup/*': function(ops) {
+		
 	},
 
-	'delay -> timeout -> delay -> sayHello': function(ops, callback) {
-		console.log("hello %s", ops.name);
-
-		callback();
+	'signup': function(ops) {
+		
 	}
-})
+});
 
 
-target.sayHello({ name: 'test' }, function() {
-	console.log("done!");
-})
+collection.get('signup');

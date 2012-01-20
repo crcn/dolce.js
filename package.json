@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "crema":"*",
-    "step":"*"
+    "sift":"*"
   },
   "devDependencies": {},
   "main": "./lib/index.js",
