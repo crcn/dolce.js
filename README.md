@@ -173,7 +173,6 @@ router.on({
 	 */
 	
 	'signup/*': function() {
-		
 		//check if the account is invited
 	},
 
@@ -182,7 +181,6 @@ router.on({
 	 */
 
 	'signup': function() {
-		
 		//sign the user up
 	}
 });
