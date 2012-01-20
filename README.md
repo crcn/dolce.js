@@ -71,7 +71,6 @@ TODO
 ## Regular Routes
 
 ```javascript
-
 router.on({
 	
 	'some/route': function() {
@@ -95,7 +94,6 @@ router.on({
 Tags are filterable items you can attach to your routes. For example:
 
 ```javascript
-
 router.on({
 	
 	/**
@@ -135,7 +133,6 @@ router.dispatch('users', { data: { username: 'crcn' }, tags: { method: 'POST' } 
 Explicit middleware consist of routes you explictly define
 
 ```javascript
-
 router.on({
 	
 	/**
@@ -162,14 +159,13 @@ router.on({
 		
 	}
 });
-
 ```
 
 ## Implicit Middleware
 
 Implicit middleware allows you to inject routes without explicitly defining them. For example
 
-```
+```javascript
 router.on({
 	
 	'signup/*': function() {
@@ -186,8 +182,7 @@ router.on({
 
 ## Greedy Routes
 
-```
-
+```javascript
 router.on({
 	
 	/**
