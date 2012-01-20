@@ -130,8 +130,6 @@ router.dispatch('users', { data: { username: 'crcn' }, tags: { method: 'POST' } 
 
 ## Explicit Middleware
 
-Explicit middleware consist of routes you explictly define
-
 ```javascript
 router.on({
 	
@@ -163,7 +161,7 @@ router.on({
 
 ## Implicit Middleware
 
-Implicit middleware allows you to inject routes without explicitly defining them. For example
+Implicit middleware allows you to inject routes without explicitly defining them. For example:
 
 ```javascript
 router.on({
