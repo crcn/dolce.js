@@ -177,7 +177,7 @@ router.on({
 
 ## Implicit Middleware
 
-Implicit middleware allows you to inject routes without explicitly defining them. For example:
+Implicit middleware allows you to inject routes without explicitly defining them. This example for instance would allow you to drop in an "alpha" check to make sure a user has been invited to a service before signing up:
 
 ```javascript
 router.on({
@@ -200,7 +200,12 @@ router.on({
 });
 ```
 
-## Greedy Routes
+I typically drop implicit middleware in separate files, and load load them in as plugins which can be taken out without breaking the app. The plugin above might be separated as such:
+
+`plugins/auth/signup.js` - plugin which signs the user up.
+`plugins/auth/beta_signup.js` - drop-in plugin that checks if a user can signup or not.
+
+## Greedy Middleware
 
 ```javascript
 router.on({
@@ -219,7 +224,29 @@ router.on({
 	 */
 
 	'-perm=SUPER invite/users': function() {
-		//admin function
+		//admin function - gets caught by /** because of -perm
+	}
+})
+```
+
+Note that greedy middleware is filterable based on tags. The above greedy `/**` middleware looks for the `perm` tag to identify
+private routes.
+
+Another Example:
+
+```javascript
+router.on({
+	
+	'my/**': function() {
+		//private zone! 	
+	},
+
+	'my/profile': function() {
+		//goes through my/** before getting here
+	},
+
+	'my/photos': function() {
+		//goes through my/** 
 	}
 })
 ```
