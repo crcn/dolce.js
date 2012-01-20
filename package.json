@@ -14,7 +14,8 @@
   },
   "devDependencies": {
     "benchmark":"*",
-    "colors":"*"
+    "colors":"*",
+    "vows":"*"
   },
   "main": "./lib/index.js",
   "author": "Craig Condon"
