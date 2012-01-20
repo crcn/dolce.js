@@ -17,7 +17,7 @@ router.on({
 	'validateLogin': function(ops) {
 
 		if(ops.u != 'username' && ops.p != 'password') return new Error('Invalid Login');
-
+  
 	},
 
 	/**
