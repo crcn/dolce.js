@@ -132,14 +132,6 @@ router.dispatch('users', { data: { username: 'crcn' }, tags: { method: 'POST' } 
 
 ```javascript
 router.on({
-	
-	/**
-	 * parses the POST body, along with any cookies before getting to the login route
-	 */
-
-	'postBody -> parseCookies -> login': function() {
-		
-	},
 
 	/**
 	 * returns whether an account exists
