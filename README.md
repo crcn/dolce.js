@@ -25,7 +25,7 @@ console.log(col1.get('world')); //[{ value: 'HELLO' }, { value: 'WORLD' }]
 //parameters
 col5.add('validate/:name');
 col5.add('validate/:firstName -> add/user/:firstName/:lastName');
-logCollection(col5.get('add/user/craig/condon')); //[{ value: 'HELLO' }, { value: 'WORLD' }]
+console.log(col5.get('add/user/craig/condon')); //[{ value: 'HELLO' }, { value: 'WORLD' }]
 
 //implicit middleware
 col2.add('hello/*', 'HELLO')
@@ -122,7 +122,7 @@ TRUE if the given channel exists in the collection. API is the same as `.get`
 
 ## Caveats
 
-- 
+
 
 
 
