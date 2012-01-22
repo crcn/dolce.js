@@ -13,6 +13,7 @@ vows.describe('Implicit Routes').addBatch({
 			
 			collection.addObject({
 				
+				'-method a/**':1,
 				'a': 1,
 				'-method a': 1,//should NOT get added
 				'-method=DELETE  a': 1,
@@ -28,16 +29,16 @@ vows.describe('Implicit Routes').addBatch({
 		},
 
 		'-method=DELETE a length = 1': function(topic) {
-			assert.equal(flatten(topic.get('a', { tags: { method: 'DELETE' }})).length, 1); 
+			assert.equal(flatten(topic.get('a', { tags: { method: 'DELETE' }})).length, 2); 
 		},
 
-		'-method=DELETE a/b length = 2': function(topic) {
-			assert.equal(flatten(topic.get('a/b', { tags: { method: 'DELETE' }})).length, 2); //a without DELETE is also added 
+		'-method=DELETE a/b length = 4': function(topic) {
+			assert.equal(flatten(topic.get('a/b', { tags: { method: 'DELETE' }})).length, 4); //a without DELETE is also added 
 		},
 
-		'-method=DELETE a/bc length = 4': function(topic) {
+		'-method=DELETE a/bc length = 8': function(topic) {
 
-			assert.equal(flatten(topic.get('a/b/c', {tags: { method: 'DELETE' }})).length, 4);
+			assert.equal(flatten(topic.get('a/b/c', {tags: { method: 'DELETE' }})).length, 8);
 		},
 	}
 }).export(module);
