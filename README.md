@@ -128,7 +128,17 @@ collection.add('-method validate/**');
 collection.add('-method=POST validate/**');
 collection.get('-method=POST validate/login');
 
-collection.get('validate/login'); //goes through -method=POST validate/** before getting to login. not both 
+//goes through -method=POST validate/** before getting to login. not both 
+collection.get('validate/login'); 
+
+
+collection.add('-method=POST validate/**');
+collection.get('-method validate/login');
+
+//does NOT go through validate/** because the method is not POST
+collection.get('validate/login'); 
+
+
 ```
 
 
