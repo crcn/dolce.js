@@ -45,7 +45,7 @@ col4.add('-method=UPDATE users/:userid','update user');
 col4.add('-method=DELETE users/:userid', 'delete user');
 col4.add('-method=GET users/:userid', 'get user');
 
-console.log(col4.get('users/14732843', { method: 'GET' })); //[{ tags: { method: 'GET' }, value: 'get user' }];
+console.log(col4.get('users/14732843', { tags: { method: 'GET' } })); //[{ tags: { method: 'GET' }, value: 'get user' }];
 ```
 
 
