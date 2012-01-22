@@ -120,4 +120,9 @@ A returned value may look something like this:
 TRUE if the given channel exists in the collection. API is the same as `.get`
 
 
+## Caveats
+
+- 
+
+
 

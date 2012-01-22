@@ -1,6 +1,7 @@
 var vows = require('vows'),
 dolce = require('../'),
-assert = require('assert');
+assert = require('assert'),
+flatten = require('./flattenCollections');
 
 
 vows.describe('Implicit Routes').addBatch({
@@ -27,15 +28,16 @@ vows.describe('Implicit Routes').addBatch({
 		},
 
 		'-method=DELETE a length = 1': function(topic) {
-			assert.equal(topic.get('a', { tags: { method: 'DELETE' }}).collection.length, 1); 
+			assert.equal(flatten(topic.get('a', { tags: { method: 'DELETE' }})).length, 1); 
 		},
 
-		'-method=DELETE a/b length = 3': function(topic) {
-			assert.equal(topic.get('a/b', { tags: { method: 'DELETE' }}).collection.length, 3); //a without DELETE is also added 
+		'-method=DELETE a/b length = 2': function(topic) {
+			assert.equal(flatten(topic.get('a/b', { tags: { method: 'DELETE' }})).length, 2); //a without DELETE is also added 
 		},
 
-		'-method=DELETE a/b length = 6': function(topic) {
-			assert.equal(topic.get('a/b/c', {tags: { method: 'DELETE' }}).collection.length, 6);
+		'-method=DELETE a/bc length = 4': function(topic) {
+
+			assert.equal(flatten(topic.get('a/b/c', {tags: { method: 'DELETE' }})).length, 4);
 		},
 	}
 }).export(module);

@@ -1,6 +1,7 @@
 var vows = require('vows'),
 dolce = require('../'),
-assert = require('assert');
+assert = require('assert'),
+flatten = require('./flattenCollections');
 
 
 vows.describe('Implicit Routes').addBatch({
@@ -33,35 +34,35 @@ vows.describe('Implicit Routes').addBatch({
 		},
 
 		'a length = 2': function(topic) {
-			assert.equal(topic.get('a').collection.length, 2); 
+			assert.equal(flatten(topic.get('a')).length, 2); 
 		},
 
 		'b length = 4': function(topic) {
-			assert.equal(topic.get('b').collection.length, 4); 
+			assert.equal(flatten(topic.get('b')).length, 4); 
 		},
 
 		'c length = 6': function(topic) {
-			assert.equal(topic.get('c').collection.length, 6); 
+			assert.equal(flatten(topic.get('c')).length, 6); 
 		},
 
 		'd length = 8': function(topic) {
-			assert.equal(topic.get('d').collection.length, 8); 
+			assert.equal(flatten(topic.get('d')).length, 8); 
 		},
 
 		'aa length = 4': function(topic) {
-			assert.equal(topic.get('aa').collection.length, 4); 
+			assert.equal(flatten(topic.get('aa')).length, 4); 
 		},
 
 		'bb length = 12': function(topic) {
-			assert.equal(topic.get('bb').collection.length, 12); 
+			assert.equal(flatten(topic.get('bb')).length, 12); 
 		},
 
 		'cc length = 30': function(topic) {
-			assert.equal(topic.get('cc').collection.length, 30); 
+			assert.equal(flatten(topic.get('cc')).length, 30); 
 		},
 
 		'dd length = 68': function(topic) {
-			assert.equal(topic.get('dd').collection.length, 68); 
+			assert.equal(flatten(topic.get('dd')).length, 68); 
 		}
 	}
 }).export(module);

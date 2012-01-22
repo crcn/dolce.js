@@ -43,3 +43,5 @@ col4.add('-method=DELETE users/:userid', 'delete user');
 col4.add('-method=GET users/:userid', 'get user');
 
 logCollection(col4.get('users/14732843', { tags: { method: 'GET' } })); //[{ tags: { method: 'GET' }, value: 'get user' }];
+
+col4.get('users/14732843', { tags: { method: 'GET' } });
