@@ -48,4 +48,76 @@ col4.add('-method=GET users/:userid', 'get user');
 console.log(col4.get('users/14732843', { tags: { method: 'GET' } })); //[{ tags: { method: 'GET' }, value: 'get user' }];
 ```
 
+## API
+
+### .add(type, value);
+
+Adds data to the collection
+
+
+### .addObject(value);
+
+Adds an object to the collection
+
+```javascript
+
+collection.add({
+	'key': 1,
+	'key2': 2
+})
+```
+
+### .get(channel[, ops])
+
+Returns a collection based on the params given
+
+- `channel` - the path to the value, e.g., 'add/user', 'validate/some/stuff'
+- `ops` - the options for fetching data
+	- `tags` - the tags to filter against
+
+A returned value may look something like this:
+
+```javascript
+
+{
+  "paths": [
+    {
+      "value": "users",
+      "param": false
+    },
+    {
+      "value": "14732843",
+      "param": false
+    }
+  ],
+  "collection": [
+    {
+      "paths": [
+        {
+          "value": "users",
+          "param": false
+        },
+        {
+          "value": "userid",
+          "param": true
+        }
+      ],
+      "params": {
+        "userid": "14732843"
+      },
+      "tags": {
+        "method": "GET"
+      },
+      "value": "get user"
+    }
+  ]
+}
+
+```
+
+### .contains(channel[, ops])
+
+TRUE if the given channel exists in the collection. API is the same as `.get`
+
+
 
