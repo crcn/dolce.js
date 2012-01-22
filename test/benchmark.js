@@ -6,7 +6,7 @@ var suite = new Benchmark.Suite,
 collection = dolce.collection();
 
 
-collection.add({
+collection.addObject({
 
 	/**
 	 */

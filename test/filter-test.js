@@ -10,7 +10,7 @@ vows.describe('Implicit Routes').addBatch({
 		topic: function() {
 			var collection = dolce.collection();
 			
-			collection.add({
+			collection.addObject({
 				
 				'a': 1,
 				'-method a': 1,//should NOT get added
@@ -27,15 +27,15 @@ vows.describe('Implicit Routes').addBatch({
 		},
 
 		'-method=DELETE a length = 1': function(topic) {
-			assert.equal(topic.get('a', {method: 'DELETE'}).length, 1); 
+			assert.equal(topic.get('a', { tags: { method: 'DELETE' }}).collection.length, 1); 
 		},
 
 		'-method=DELETE a/b length = 3': function(topic) {
-			assert.equal(topic.get('a/b', {method: 'DELETE'}).length, 3); //a without DELETE is also added 
+			assert.equal(topic.get('a/b', { tags: { method: 'DELETE' }}).collection.length, 3); //a without DELETE is also added 
 		},
 
 		'-method=DELETE a/b length = 6': function(topic) {
-			assert.equal(topic.get('a/b/c', {method: 'DELETE'}).length, 6);
+			assert.equal(topic.get('a/b/c', {tags: { method: 'DELETE' }}).collection.length, 6);
 		},
 	}
 }).export(module);

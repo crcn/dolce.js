@@ -19,7 +19,58 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 437,
+				"buffer_size": 4158,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/collection.js",
+			"settings":
+			{
+				"buffer_size": 4656,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/router.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/explicit-test.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var dolce = require('../');\nrequire('colors'),\nBenchmark = require('benchmark');\n\nvar suite = new Benchmark.Suite,\ncollection = dolce.collection();\n\n\ncollection.add({\n\n	/**\n	 */\n\n	'thruAgain -> thru': 1,\n\n	/**\n	 */\n\n	'thruAgain': 1,\n\n	/**\n	 */\n\n	'hello/**': 1,\n\n	/**\n	 */\n	\n	'hello/:world/**': 1,\n\n	/**\n	 */\n\n	'thru -> hello/:world/test': 1,\n\n\n	/**\n	 */\n\n\n	'a': 1,\n\n\n	/**\n	 */\n\n	'a/**': 1,\n\n	/**\n	 */\n\n	'a -> b': 1,\n\n	/**\n	 */\n\n	'b/**': 1,\n\n	/**\n	 */\n\n	'b -> c': 1,\n\n	/**\n	 */\n\n	'c/**': 1,\n\n	/**\n	 */\n\n	'a -> b -> c -> d': 1,\n\n\n	/**\n	 */\n\n	'-method=POST aa':1,\n\n	/**\n	 */\n\n	'-method=GET aa':1,\n\n	/**\n	 */\n\n	'-method=POST aa -> bb': 1,\n\n	/**\n	 */\n\n	'-method=GET aa -> bb': 1,\n\n	/**\n	 */\n\n	'-method=POST bb -> cc': 1,\n\n	/**\n	 */\n\n	'-method=GET bb -> cc': 1\n});\n\n\nsuite.add('thruAgain -> thru -> hello/** -> hello/:world/** -> hello/:world/test', function() {\n\n	collection.get('hello/world/test');\n\n}).\nadd('a/** -> a -> b/** -> a/** -> a -> b -> c/** -> b/** -> a/** -> a -> b -> c -> d', function() {\n\n	collection.get('d');\n\n}).\nadd('-method=POST aa -> bb -> cc', function() {\n	\n	collection.get('cc', { method: 'POST' });\n\n}).\non('cycle', function(event, bench) {\n	console.log(String(bench));\n}).\non('complete', function() {\n}).\nrun({'async':true});\n\n\n\n",
+			"file": "tests/benchmark.js",
+			"file_size": 1252,
+			"file_write_time": 1327040145000000,
+			"settings":
+			{
+				"buffer_size": 1252,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/tree.js",
+			"settings":
+			{
+				"buffer_size": 3405,
 				"line_ending": "Unix"
 			}
 		},
@@ -27,7 +78,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 296,
+				"buffer_size": 411,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,15 +94,115 @@
 			"file": "lib/index.js",
 			"settings":
 			{
-				"buffer_size": 863,
+				"buffer_size": 45,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "examples/timeout.js",
+			"file": "lib/disposable.js",
 			"settings":
 			{
-				"buffer_size": 502,
+				"buffer_size": 367,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin H5tzry.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var dolce = require('../lib'),\ncollection = dolce.collection();\n\n\ncollection.add({\n	\n	'signup/*': function(ops) {\n		\n	},\n\n	'signup': function(ops) {\n		\n	}\n});\n\n\ncollection.get('signup');",
+			"file": "examples/timeout.js",
+			"file_size": 186,
+			"file_write_time": 1327008802000000,
+			"settings":
+			{
+				"buffer_size": 186,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "examples/signup.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "examples/funky-routes.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/sift/sift.js",
+			"settings":
+			{
+				"buffer_size": 6289,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/explicit-test.js",
+			"settings":
+			{
+				"buffer_size": 1094,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/implicit-test.js",
+			"settings":
+			{
+				"buffer_size": 1333,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".travis.yml",
+			"settings":
+			{
+				"buffer_size": 95,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/filter-test.js",
+			"settings":
+			{
+				"buffer_size": 960,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var vows = require('vows'),\ndolce = require('../'),\nassert = require('assert');\n\n\nvows.describe('Greedy Routes').addBatch({\n	\n	'An explicit collection of routes': {\n		\n		topic: function() {\n			var collection = dolce.collection();\n			\n			collection.add({\n				\n				'a':1,\n				'a/b': 1,\n				'a/b/c': 1,\n				'a/b/c/d': 1,\n				'a/**': 1,\n				'a/b/**': 1,\n				'a/b/c/**': 1,\n				'a/b/c/d/**':1,\n				'a -> a/:b':1,\n				'a -> a/b -> a/b/:c':1,\n				'a -> a/b -> a/b/c -> a/b/c/:d':1\n			});\n\n			return collection;\n		},\n\n		'a length = 2': function(topic) {\n			assert.equal(topic.get('a').length, 2); \n		},\n\n		'a/b length = 3': function(topic) {\n			assert.equal(topic.get('a/b').length, 3); \n		},\n\n		'a/b/c length = 4': function(topic) {\n			assert.equal(topic.get('a/b/c').length, 4); \n		},\n\n		'a/b/c/d length = 5': function(topic) {\n			assert.equal(topic.get('a/b/c/d').length, 5); \n		},\n\n		'a/bb length = 4': function(topic) {\n			assert.equal(topic.get('a/bb').length, 4); \n		},\n\n		'a/b/cc length = 8': function(topic) {\n			assert.equal(topic.get('a/b/cc').length, 8); \n		},\n\n		'a/b/c/dd length = 13': function(topic) {\n			assert.equal(topic.get('a/b/c/dd').length, 13); \n		},\n	}\n\n}).export(module);",
+			"file": "test/greedy-test.js",
+			"file_size": 1191,
+			"file_write_time": 1327041959000000,
+			"settings":
+			{
+				"buffer_size": 1189,
 				"line_ending": "Unix"
 			}
 		}
@@ -136,6 +287,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_addListener",
+			"concat",
+			"_filterListeners",
+			"_addL",
+			"_hasListeners",
+			"findList",
+			".name()",
+			"bubble",
+			"_deepest",
+			"bubbleU",
+			"_depth",
+			"increaseParentDepth",
 			"auth/token",
 			"_pass",
 			"auth/token",
@@ -187,7 +350,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -221,15 +384,15 @@
 					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 437,
+						"buffer_size": 4158,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								63,
-								63
+								1757,
+								1757
 							]
 						],
 						"settings":
@@ -238,25 +401,184 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1457.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "package.json",
+					"file": "lib/collection.js",
 					"settings":
 					{
-						"buffer_size": 296,
+						"buffer_size": 4656,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								207,
-								207
+								1170,
+								1170
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 439.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/router.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "tests/explicit-test.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "tests/benchmark.js",
+					"settings":
+					{
+						"buffer_size": 1252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1077,
+								1077
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1114.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/lib",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "lib/tree.js",
+					"settings":
+					{
+						"buffer_size": 3405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1392,
+								1392
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 765.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "package.json",
+					"settings":
+					{
+						"buffer_size": 411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								408
 							]
 						],
 						"settings":
@@ -272,7 +594,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 9,
 					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
@@ -298,19 +620,126 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 10,
 					"file": "lib/index.js",
 					"settings":
 					{
-						"buffer_size": 863,
+						"buffer_size": 45,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								775,
-								775
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "lib/disposable.js",
+					"settings":
+					{
+						"buffer_size": 367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								67,
+								67
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/tmp/subl stdin H5tzry.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "examples/timeout.js",
+					"settings":
+					{
+						"buffer_size": 186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "examples/signup.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -324,27 +753,241 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "examples/timeout.js",
+					"buffer": 15,
+					"file": "examples/funky-routes.js",
 					"settings":
 					{
-						"buffer_size": 502,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								255,
-								255
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "node_modules/sift/sift.js",
+					"settings":
+					{
+						"buffer_size": 6289,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3935,
+								3935
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4020.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "test/explicit-test.js",
+					"settings":
+					{
+						"buffer_size": 1094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								510,
+								510
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "test/implicit-test.js",
+					"settings":
+					{
+						"buffer_size": 1333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": ".travis.yml",
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								95,
+								95
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "test/filter-test.js",
+					"settings":
+					{
+						"buffer_size": 960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "test/greedy-test.js",
+					"settings":
+					{
+						"buffer_size": 1189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 49.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -385,7 +1028,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

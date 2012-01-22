@@ -1,26 +1,25 @@
 {
-  "name": "dolce",
-  "description": "Router with syntactic sugar",
-  "version": "0.0.1",
-  "repository": {
-    "url": ""
-  },
-  "engines": {
-    "node": "*"
-  },
-  "dependencies": {
-    "crema":"*",
-    "sift":"*"
-  },
-  "devDependencies": {
-    "benchmark":"*",
-    "colors":"*",
-    "vows":"*"
-  },
-  "main": "./lib/index.js",
-  "author": "Craig Condon",
-  
-  "scripts": {
-      "test": "vows --spec"
-  }
+    "name": "dolce",
+    "description": "Collections with syntactic sugar",
+    "version": "0.0.2",
+    "repository": {
+        "url": ""
+    },
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {
+        "crema": "*",
+        "sift": "*"
+    },
+    "devDependencies": {
+        "benchmark": "*",
+        "colors": "*",
+        "vows": "*"
+    },
+    "main": "./lib/index.js",
+    "author": "Craig Condon",
+    "scripts": {
+        "test": "vows --spec"
+    }
 }
