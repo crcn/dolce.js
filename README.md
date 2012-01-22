@@ -61,7 +61,7 @@ Adds an object to the collection
 
 ```javascript
 
-collection.add({
+collection.addObject({
 	'key': 1,
 	'key2': 2
 })
