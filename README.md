@@ -129,11 +129,11 @@ TRUE if the given channel exists in the collection. API is the same as `.get`
 
 ```javascript
 
-collection.add('-method validate/**');
+collection.add('-anotherTag validate/**');
 collection.add('-method=POST validate/**');
 collection.get('-method=POST validate/login');
 
-//goes through -method=POST validate/** before getting to login. not both 
+//goes through -method=POST validate/** before getting to login, NOT -anotherTag validate/** 
 collection.get('validate/login'); 
 
 
