@@ -16,7 +16,7 @@ col3 = dolce.collection(),
 col4 = dolce.collection(),
 col5 = dolce.collection();
 
-//explicit middleware
+//explicit chain
 col1.add('hello', 'HELLO');
 col1.add('hello -> world', 'WORLD');
 
@@ -27,20 +27,20 @@ col5.add('validate/:name');
 col5.add('validate/:firstName -> add/user/:firstName/:lastName');
 console.log(col5.get('add/user/craig/condon')); //[{ value: 'HELLO' }, { value: 'WORLD' }]
 
-//implicit middleware
+//implicit chain
 col2.add('hello/*', 'HELLO')
 col2.add('hello', 'WORLD');
 
 console.log(col2.get('hello')); //[{ value: 'HELLO' }, { value: 'WORLD' } ]
 
-//greedy middleware
+//greedy chain
 col3.add('hello/**', 'HELLO')
 col3.add('hello/awesome/**', 'AWESOME');
 col3.add('hello/awesome/world', 'WORLD');
 
 console.log(col3.get('hello/awesome/world')); //[{ value: 'HELLO' }, { value: 'AWESOME' }, { value: 'WORLD' } ]
 
-//filtering middleware
+//filtering chains
 col4.add('-method=UPDATE users/:userid','update user');
 col4.add('-method=DELETE users/:userid', 'delete user');
 col4.add('-method=GET users/:userid', 'get user');
@@ -122,6 +122,14 @@ TRUE if the given channel exists in the collection. API is the same as `.get`
 
 ## Caveats
 
+```javascript
+
+collection.add('-method validate/**');
+collection.add('-method=POST validate/**');
+collection.get('-method=POST validate/login');
+
+collection.get('validate/login'); //goes through -method=POST validate/** before getting to login. not both 
+```
 
 
 
