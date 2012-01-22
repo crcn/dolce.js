@@ -90,26 +90,31 @@ A returned value may look something like this:
       "param": false
     }
   ],
-  "collection": [
-    {
-      "paths": [
-        {
-          "value": "users",
-          "param": false
+  "tags": {
+    "method": "GET"
+  },
+  "chains": [
+    [
+      {
+        "paths": [
+          {
+            "value": "users",
+            "param": false
+          },
+          {
+            "value": "userid",
+            "param": true
+          }
+        ],
+        "params": {
+          "userid": "14732843"
         },
-        {
-          "value": "userid",
-          "param": true
-        }
-      ],
-      "params": {
-        "userid": "14732843"
-      },
-      "tags": {
-        "method": "GET"
-      },
-      "value": "get user"
-    }
+        "tags": {
+          "method": "GET"
+        },
+        "value": "get user"
+      }
+    ]
   ]
 }
 
