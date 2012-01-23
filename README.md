@@ -144,6 +144,16 @@ collection.get('-method validate/login');
 collection.get('validate/login'); 
 
 
+
+//this doesn't work
+collection.add(':param/*');
+
+//with this.
+collection.add('path');
+
+//but with this this:
+collection.add('someParam');
+
 ```
 
 
