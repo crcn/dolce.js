@@ -45,16 +45,16 @@ vows.describe('Greedy Routes').addBatch({
 			assert.equal(flatten(topic.get('a/b/c/d')).length, 5); 
 		},
 
-		'a/bb length = 4': function(topic) {
-			assert.equal(flatten(topic.get('a/bb')).length, 4); 
+		'a/bb length = 3': function(topic) {
+			assert.equal(flatten(topic.get('a/bb')).length, 3); 
 		},
 
-		'a/b/cc length = 8': function(topic) {
-			assert.equal(flatten(topic.get('a/b/cc')).length, 8); 
+		'a/b/cc length = 5': function(topic) {
+			assert.equal(flatten(topic.get('a/b/cc')).length, 5); 
 		},
 
-		'a/b/c/dd length = 13': function(topic) {
-			assert.equal(flatten(topic.get('a/b/c/dd')).length, 13); 
+		'a/b/c/dd length = 7': function(topic) {
+			assert.equal(flatten(topic.get('a/b/c/dd')).length, 7); 
 		},
 	}
 

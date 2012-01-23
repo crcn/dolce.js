@@ -32,13 +32,13 @@ vows.describe('Implicit Routes').addBatch({
 			assert.equal(flatten(topic.get('a', { tags: { method: 'DELETE' }})).length, 2); 
 		},
 
-		'-method=DELETE a/b length = 4': function(topic) {
-			assert.equal(flatten(topic.get('a/b', { tags: { method: 'DELETE' }})).length, 4); //a without DELETE is also added 
+		'-method=DELETE a/b length = 3': function(topic) {
+			assert.equal(flatten(topic.get('a/b', { tags: { method: 'DELETE' }})).length, 3); //a without DELETE is also added 
 		},
 
-		'-method=DELETE a/bc length = 8': function(topic) {
+		'-method=DELETE a/bc length = 5': function(topic) {
 
-			assert.equal(flatten(topic.get('a/b/c', {tags: { method: 'DELETE' }})).length, 8);
+			assert.equal(flatten(topic.get('a/b/c', {tags: { method: 'DELETE' }})).length, 5);
 		},
 	}
 }).export(module);
