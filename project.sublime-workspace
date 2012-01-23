@@ -3,6 +3,18 @@
 	{
 		"selected_items":
 		[
+			[
+				"expandedC",
+				"expandedChain"
+			],
+			[
+				"usedGr",
+				"usedGreedyPaths"
+			],
+			[
+				"expande",
+				"expandedCollections"
+			]
 		]
 	},
 	"buffers":
@@ -19,7 +31,15 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 4158,
+				"buffer_size": 3235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin FexMxs.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -27,7 +47,15 @@
 			"file": "lib/collection.js",
 			"settings":
 			{
-				"buffer_size": 4656,
+				"buffer_size": 8330,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/contains-test.js",
+			"settings":
+			{
+				"buffer_size": 740,
 				"line_ending": "Unix"
 			}
 		},
@@ -70,7 +98,7 @@
 			"file": "lib/tree.js",
 			"settings":
 			{
-				"buffer_size": 3405,
+				"buffer_size": 3488,
 				"line_ending": "Unix"
 			}
 		},
@@ -78,7 +106,15 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 411,
+				"buffer_size": 477,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin voKAmo.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -153,7 +189,7 @@
 			"file": "test/explicit-test.js",
 			"settings":
 			{
-				"buffer_size": 1094,
+				"buffer_size": 1206,
 				"line_ending": "Unix"
 			}
 		},
@@ -161,7 +197,15 @@
 			"file": "test/implicit-test.js",
 			"settings":
 			{
-				"buffer_size": 1333,
+				"buffer_size": 1449,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/flattenCollections.js",
+			"settings":
+			{
+				"buffer_size": 95,
 				"line_ending": "Unix"
 			}
 		},
@@ -177,7 +221,7 @@
 			"file": "test/filter-test.js",
 			"settings":
 			{
-				"buffer_size": 960,
+				"buffer_size": 1092,
 				"line_ending": "Unix"
 			}
 		},
@@ -196,13 +240,42 @@
 			}
 		},
 		{
-			"contents": "var vows = require('vows'),\ndolce = require('../'),\nassert = require('assert');\n\n\nvows.describe('Greedy Routes').addBatch({\n	\n	'An explicit collection of routes': {\n		\n		topic: function() {\n			var collection = dolce.collection();\n			\n			collection.add({\n				\n				'a':1,\n				'a/b': 1,\n				'a/b/c': 1,\n				'a/b/c/d': 1,\n				'a/**': 1,\n				'a/b/**': 1,\n				'a/b/c/**': 1,\n				'a/b/c/d/**':1,\n				'a -> a/:b':1,\n				'a -> a/b -> a/b/:c':1,\n				'a -> a/b -> a/b/c -> a/b/c/:d':1\n			});\n\n			return collection;\n		},\n\n		'a length = 2': function(topic) {\n			assert.equal(topic.get('a').length, 2); \n		},\n\n		'a/b length = 3': function(topic) {\n			assert.equal(topic.get('a/b').length, 3); \n		},\n\n		'a/b/c length = 4': function(topic) {\n			assert.equal(topic.get('a/b/c').length, 4); \n		},\n\n		'a/b/c/d length = 5': function(topic) {\n			assert.equal(topic.get('a/b/c/d').length, 5); \n		},\n\n		'a/bb length = 4': function(topic) {\n			assert.equal(topic.get('a/bb').length, 4); \n		},\n\n		'a/b/cc length = 8': function(topic) {\n			assert.equal(topic.get('a/b/cc').length, 8); \n		},\n\n		'a/b/c/dd length = 13': function(topic) {\n			assert.equal(topic.get('a/b/c/dd').length, 13); \n		},\n	}\n\n}).export(module);",
 			"file": "test/greedy-test.js",
-			"file_size": 1191,
-			"file_write_time": 1327041959000000,
 			"settings":
 			{
-				"buffer_size": 1189,
+				"buffer_size": 1299,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "examples/overview.js",
+			"settings":
+			{
+				"buffer_size": 1442,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/benchmark.js",
+			"settings":
+			{
+				"buffer_size": 1258,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build/syntax.ebnf",
+			"settings":
+			{
+				"buffer_size": 163,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin ODgU9m.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -231,6 +304,7 @@
 	},
 	"file_history":
 	[
+		"/Users/craig/Dropbox/Developer/Public/dolce/examples/param.js",
 		"/Volumes/minimac/Users/craig/Dropbox/Developer/Public/haba/examples/test1/plugins/hello1.js",
 		"/Volumes/minimac/Users/craig/Dropbox/Developer/Public/haba/lib/plugins/remote.js",
 		"/Volumes/minimac/Users/craig/Dropbox/Developer/Public/haba/lib/queue.js",
@@ -284,9 +358,56 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"path:",
+			"usedGreedy",
+			"_allCollections",
+			"_all",
+			"_expand",
+			"_allCollections",
+			"_greedy",
+			"collections",
+			"chain",
+			"middleware",
+			"chain",
+			"middleware",
+			"Middleware",
+			"middleware",
+			"_middlewareSift",
+			"_orSift",
+			"_tagSift",
+			"_andSifter",
+			"_orSifter",
+			"_greedyC",
+			"_greedyM",
+			"_siftMiddleware",
+			"sifters.and",
+			"_siftMiddleware",
+			"sifters",
+			"_siftMiddleware",
+			"_thru",
+			"sifters",
+			"tagsToArr",
+			".and",
+			"console.l",
+			"_collections",
+			"_filterData",
+			"child",
+			"childPaths",
+			"_middleware",
+			"useOr",
+			"findChild",
+			"_fillPaths",
+			"useOr",
+			"_filterData",
+			"data",
+			"listener",
+			"listeners",
+			"Listeners",
+			"callback",
+			"listeners",
 			"_addListener",
 			"concat",
 			"_filterListeners",
@@ -340,6 +461,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"chain"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -350,7 +472,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -384,42 +506,69 @@
 					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 4158,
+						"buffer_size": 3235,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1757,
-								1757
+								3222,
+								3222
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1457.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "lib/collection.js",
+					"file": "/tmp/subl stdin FexMxs.txt",
 					"settings":
 					{
-						"buffer_size": 4656,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1170,
-								1170
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/collection.js",
+					"settings":
+					{
+						"buffer_size": 8330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6290,
+								6290
 							]
 						],
 						"settings":
@@ -428,13 +577,40 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 439.0,
+						"translation.y": 6617.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
+					"file": "test/contains-test.js",
+					"settings":
+					{
+						"buffer_size": 740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								664,
+								664
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "lib/router.js",
 					"settings":
 					{
@@ -460,7 +636,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "tests/explicit-test.js",
 					"settings":
 					{
@@ -486,7 +662,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "tests/benchmark.js",
 					"settings":
 					{
@@ -513,7 +689,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -539,19 +715,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "lib/tree.js",
 					"settings":
 					{
-						"buffer_size": 3405,
+						"buffer_size": 3488,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1392,
-								1392
+								689,
+								697
 							]
 						],
 						"settings":
@@ -560,31 +736,31 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 765.0,
+						"translation.y": 2222.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 411,
+						"buffer_size": 477,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								364,
-								408
+								75,
+								43
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -594,7 +770,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
+					"file": "/tmp/subl stdin voKAmo.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
@@ -620,7 +822,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": "lib/index.js",
 					"settings":
 					{
@@ -647,7 +849,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 14,
 					"file": "lib/disposable.js",
 					"settings":
 					{
@@ -658,8 +860,8 @@
 						"selection":
 						[
 							[
-								67,
-								67
+								137,
+								137
 							]
 						],
 						"settings":
@@ -674,7 +876,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 15,
 					"file": "/tmp/subl stdin H5tzry.txt",
 					"settings":
 					{
@@ -700,7 +902,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 16,
 					"file": "examples/timeout.js",
 					"settings":
 					{
@@ -727,7 +929,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 17,
 					"file": "examples/signup.js",
 					"settings":
 					{
@@ -753,7 +955,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 18,
 					"file": "examples/funky-routes.js",
 					"settings":
 					{
@@ -780,7 +982,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 19,
 					"file": "node_modules/sift/sift.js",
 					"settings":
 					{
@@ -807,19 +1009,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 20,
 					"file": "test/explicit-test.js",
 					"settings":
 					{
-						"buffer_size": 1094,
+						"buffer_size": 1206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								510,
-								510
+								975,
+								975
 							]
 						],
 						"settings":
@@ -828,25 +1030,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 77.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 21,
 					"file": "test/implicit-test.js",
 					"settings":
 					{
-						"buffer_size": 1333,
+						"buffer_size": 1449,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								1333
+								122,
+								122
 							]
 						],
 						"settings":
@@ -861,7 +1063,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 22,
+					"file": "test/flattenCollections.js",
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 23,
 					"file": ".travis.yml",
 					"settings":
 					{
@@ -887,19 +1115,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 24,
 					"file": "test/filter-test.js",
 					"settings":
 					{
-						"buffer_size": 960,
+						"buffer_size": 1092,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								314,
-								314
+								958,
+								958
 							]
 						],
 						"settings":
@@ -914,7 +1142,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 25,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -940,7 +1168,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 26,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -966,19 +1194,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 27,
 					"file": "test/greedy-test.js",
 					"settings":
 					{
-						"buffer_size": 1189,
+						"buffer_size": 1299,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								103,
-								103
+								1253,
+								1253
 							]
 						],
 						"settings":
@@ -987,7 +1215,112 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 49.0,
+						"translation.y": 152.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "examples/overview.js",
+					"settings":
+					{
+						"buffer_size": 1442,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1442,
+								1442
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "test/benchmark.js",
+					"settings":
+					{
+						"buffer_size": 1258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								764,
+								764
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1202.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "build/syntax.ebnf",
+					"settings":
+					{
+						"buffer_size": 163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "/tmp/subl stdin ODgU9m.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

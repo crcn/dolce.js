@@ -1,0 +1,5 @@
+"" {
+syntax       = [type]  { tag }  channel { '->' channel }. 
+tag 	     = '-' name [ '=' value ].          
+channel	     = ['/'] { [':'] name '/' } ['*'|'**'].
+}
