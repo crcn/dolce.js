@@ -1,5 +1,4 @@
 var vows = require('vows'),
-dolce = require('../'),
 assert = require('assert'),
 flatten = require('./flattenCollections');
 
@@ -9,9 +8,7 @@ vows.describe('Implicit Routes').addBatch({
 	'An explicit collection of routes': {
 		
 		topic: function() {
-			var collection = dolce.collection();
-			
-			collection.addObject({
+			var collection = require('./test-helper').collection({
 				'a': 1,
 				'b': 1,
 				'c': 1,
@@ -29,6 +26,7 @@ vows.describe('Implicit Routes').addBatch({
 				'aa -> bb -> cc/*': 1,
 				'aa -> bb -> cc -> dd/*':1
 			});
+
 
 			return collection;
 		},

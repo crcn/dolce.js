@@ -9,9 +9,7 @@ vows.describe('Explicit Routes').addBatch({
 	'An explicit collection of routes': {
 		
 		topic: function() {
-			var collection = dolce.collection();
-			
-			collection.addObject({
+			var collection = require('./test-helper').collection({
 				
 				'a': 1,
 				'a -> b': 1,
