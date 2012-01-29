@@ -1,5 +1,5 @@
 
-Dolce is a collection library used primarily for routing.  [![Build Status](https://secure.travis-ci.org/crcn/dolce.png)](https://secure.travis-ci.org/crcn/dolce)
+Dolce is a collection library used primarily for routing.  [![Build Status](https://secure.travis-ci.org/crcn/dolce.js.png)](https://secure.travis-ci.org/crcn/dolce)
 
 ## Use Cases:
 
