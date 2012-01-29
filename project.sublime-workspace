@@ -55,7 +55,23 @@
 			"file": "lib/collection.js",
 			"settings":
 			{
-				"buffer_size": 8330,
+				"buffer_size": 7913,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/greedy-endpoint-test.js",
+			"settings":
+			{
+				"buffer_size": 516,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin F5tvvQ.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +79,7 @@
 			"file": "test/contains-test.js",
 			"settings":
 			{
-				"buffer_size": 740,
+				"buffer_size": 728,
 				"line_ending": "Unix"
 			}
 		},
@@ -106,7 +122,7 @@
 			"file": "lib/tree.js",
 			"settings":
 			{
-				"buffer_size": 3488,
+				"buffer_size": 3490,
 				"line_ending": "Unix"
 			}
 		},
@@ -114,7 +130,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 477,
+				"buffer_size": 478,
 				"line_ending": "Unix"
 			}
 		},
@@ -146,7 +162,7 @@
 			"file": "lib/disposable.js",
 			"settings":
 			{
-				"buffer_size": 367,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -197,7 +213,7 @@
 			"file": "test/explicit-test.js",
 			"settings":
 			{
-				"buffer_size": 1206,
+				"buffer_size": 1194,
 				"line_ending": "Unix"
 			}
 		},
@@ -205,7 +221,7 @@
 			"file": "test/implicit-test.js",
 			"settings":
 			{
-				"buffer_size": 1449,
+				"buffer_size": 1414,
 				"line_ending": "Unix"
 			}
 		},
@@ -229,7 +245,7 @@
 			"file": "test/filter-test.js",
 			"settings":
 			{
-				"buffer_size": 1092,
+				"buffer_size": 1080,
 				"line_ending": "Unix"
 			}
 		},
@@ -251,7 +267,7 @@
 			"file": "test/greedy-test.js",
 			"settings":
 			{
-				"buffer_size": 1299,
+				"buffer_size": 1263,
 				"line_ending": "Unix"
 			}
 		},
@@ -369,6 +385,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_greedy",
+			"_allCollections",
 			"path:",
 			"usedGreedy",
 			"_allCollections",
@@ -480,7 +498,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -594,15 +612,15 @@
 					"file": "lib/collection.js",
 					"settings":
 					{
-						"buffer_size": 8330,
+						"buffer_size": 7913,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3978,
-								3982
+								2530,
+								2530
 							]
 						],
 						"settings":
@@ -611,25 +629,77 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2971.0,
+						"translation.y": 1709.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "test/contains-test.js",
+					"file": "test/greedy-endpoint-test.js",
 					"settings":
 					{
-						"buffer_size": 740,
+						"buffer_size": 516,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								664,
-								664
+								421,
+								421
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/tmp/subl stdin F5tvvQ.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "test/contains-test.js",
+					"settings":
+					{
+						"buffer_size": 728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -644,7 +714,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "lib/router.js",
 					"settings":
 					{
@@ -670,7 +740,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "tests/explicit-test.js",
 					"settings":
 					{
@@ -696,7 +766,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "tests/benchmark.js",
 					"settings":
 					{
@@ -723,7 +793,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -749,19 +819,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "lib/tree.js",
 					"settings":
 					{
-						"buffer_size": 3488,
+						"buffer_size": 3490,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								689,
-								697
+								2675,
+								2675
 							]
 						],
 						"settings":
@@ -770,25 +840,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2222.0,
+						"translation.y": 1801.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 477,
+						"buffer_size": 478,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								75,
-								43
+								0,
+								0
 							]
 						],
 						"settings":
@@ -804,7 +874,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 14,
 					"file": "/tmp/subl stdin voKAmo.txt",
 					"settings":
 					{
@@ -830,7 +900,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
 					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
@@ -856,7 +926,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
 					"file": "lib/index.js",
 					"settings":
 					{
@@ -883,19 +953,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 17,
 					"file": "lib/disposable.js",
 					"settings":
 					{
-						"buffer_size": 367,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								137,
-								137
+								0,
+								0
 							]
 						],
 						"settings":
@@ -910,7 +980,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 18,
 					"file": "/tmp/subl stdin H5tzry.txt",
 					"settings":
 					{
@@ -936,7 +1006,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 19,
 					"file": "examples/timeout.js",
 					"settings":
 					{
@@ -963,7 +1033,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 20,
 					"file": "examples/signup.js",
 					"settings":
 					{
@@ -989,7 +1059,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 21,
 					"file": "examples/funky-routes.js",
 					"settings":
 					{
@@ -1016,7 +1086,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 22,
 					"file": "node_modules/sift/sift.js",
 					"settings":
 					{
@@ -1043,19 +1113,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 23,
 					"file": "test/explicit-test.js",
 					"settings":
 					{
-						"buffer_size": 1206,
+						"buffer_size": 1194,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								975,
-								975
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1070,19 +1140,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 24,
 					"file": "test/implicit-test.js",
 					"settings":
 					{
-						"buffer_size": 1449,
+						"buffer_size": 1414,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								122,
-								122
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1097,7 +1167,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 25,
 					"file": "test/flattenCollections.js",
 					"settings":
 					{
@@ -1123,7 +1193,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 26,
 					"file": ".travis.yml",
 					"settings":
 					{
@@ -1149,19 +1219,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 27,
 					"file": "test/filter-test.js",
 					"settings":
 					{
-						"buffer_size": 1092,
+						"buffer_size": 1080,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								958,
-								958
+								0,
+								1080
 							]
 						],
 						"settings":
@@ -1176,71 +1246,71 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 27,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 28,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 30,
 					"file": "test/greedy-test.js",
 					"settings":
 					{
-						"buffer_size": 1299,
+						"buffer_size": 1263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1253,
-								1253
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1255,7 +1325,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 31,
 					"file": "examples/overview.js",
 					"settings":
 					{
@@ -1281,7 +1351,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 32,
 					"file": "test/benchmark.js",
 					"settings":
 					{
@@ -1308,7 +1378,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 33,
 					"file": "build/syntax.ebnf",
 					"settings":
 					{
@@ -1334,7 +1404,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 34,
 					"file": "/tmp/subl stdin ODgU9m.txt",
 					"settings":
 					{
