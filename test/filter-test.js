@@ -23,8 +23,8 @@ vows.describe('Finding routes').addBatch({
 			assert.equal(topic.find({ tags: { hook: true }}).length, 2);
 		},
 
-		'has 1 -method=GET': function(topic) {
-			assert.equal(topic.find({ tags: { method: 'GET'}}).length, 1);
+		'has 3 sifted tags': function(topic) {
+			assert.equal(topic.find({ siftTags: {$or: [{ method: 'GET' }, { hook: { $exists: true } }] }}).length, 3);
 		}
 	}
 }).export(module);
