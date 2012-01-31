@@ -15,6 +15,7 @@ vows.describe('Greedy Routes').addBatch({
 				'a/b/c': 1,
 				'a/b/c/d': 1,
 				'a/**': 1,
+				'a/**': 1,
 				'a/b/**': 1,
 				'a/b/c/**': 1,
 				'a/b/c/d/**':1,
