@@ -9,7 +9,7 @@ vows.describe('Explicit Routes').addBatch({
 		
 		topic: function() {
 			var collection = require('./test-helper').collection({
-				
+				'/': 1,
 				'a': 1,
 				'a/:b': 1,
 				'a/b': 1
@@ -18,6 +18,9 @@ vows.describe('Explicit Routes').addBatch({
 			return collection;
 		},
 
+		'contains root': function(topic) {
+			assert.isTrue(topic.contains(''));
+		},
 		'contains a': function(topic) {
 			assert.isTrue(topic.contains('a'));
 		},

@@ -55,7 +55,31 @@
 			"file": "lib/collection.js",
 			"settings":
 			{
-				"buffer_size": 8746,
+				"buffer_size": 8834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin DIgrf8.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin epcqXf.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin 9fmw65.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -119,15 +143,26 @@
 			"file": "test/contains-test.js",
 			"settings":
 			{
-				"buffer_size": 728,
+				"buffer_size": 815,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "var vows = require('vows'),\ndolce = require('../'),\nassert = require('assert'),\nflatten = require('./flattenCollections');\n\n\nvows.describe('Param-based routes').addBatch({\n	\n	'A mix of parameterized routes': {\n		\n		topic: function() {\n			var collection = require('./test-helper').collection({\n				'a/b':1,\n				':a/b': 1,\n				'a/:b': 1,\n				':a/:b': 1,\n				'a/b/c':1,\n				':a/b/c':1,\n				'a/:b/c':1,\n				'a/b/:c':1,\n				':a/:b/:c':1\n\n			});\n\n			return collection;\n		},\n\n		'has a/b': function(topic) {\n			assert.equal(flatten(topic.get('a/b')).length, 1); //1 \n		},\n\n		'has aa/b': function(topic) {\n			assert.equal(flatten(topic.get('aa/b')).length, 1); //1 \n		},\n\n		'has a/bb': function(topic) {\n			assert.equal(flatten(topic.get('a/bb')).length, 1); //1 \n		},\n\n		'has aa/bb': function(topic) {\n			assert.equal(flatten(topic.get('aa/bb')).length, 1); //1 \n		}\n\n	}\n}).export(module);",
 			"file": "test/param-test.js",
+			"file_size": 881,
+			"file_write_time": 1327946772000000,
 			"settings":
 			{
 				"buffer_size": 881,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin HNAKDT.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -323,7 +358,7 @@
 			"file": "test/greedy-test.js",
 			"settings":
 			{
-				"buffer_size": 1263,
+				"buffer_size": 1278,
 				"line_ending": "Unix"
 			}
 		},
@@ -441,6 +476,12 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_scoreTags",
+			"_params",
+			"params:",
+			"usedGreedyPaths",
+			"used",
+			"chainSifter(",
 			"_findChild",
 			"_children",
 			"oath =",
@@ -571,7 +612,7 @@
 	"groups":
 	[
 		{
-			"selected": 13,
+			"selected": 15,
 			"sheets":
 			[
 				{
@@ -685,15 +726,15 @@
 					"file": "lib/collection.js",
 					"settings":
 					{
-						"buffer_size": 8746,
+						"buffer_size": 8834,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2281,
-								2281
+								6925,
+								6925
 							]
 						],
 						"settings":
@@ -702,14 +743,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 150.0,
+						"translation.y": 6841.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/tmp/subl stdin JnX4kb.txt",
+					"file": "/tmp/subl stdin DIgrf8.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -735,7 +776,7 @@
 				},
 				{
 					"buffer": 6,
-					"file": "/tmp/subl stdin 5wLUuA.txt",
+					"file": "/tmp/subl stdin epcqXf.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -761,6 +802,84 @@
 				},
 				{
 					"buffer": 7,
+					"file": "/tmp/subl stdin 9fmw65.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/tmp/subl stdin JnX4kb.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/tmp/subl stdin 5wLUuA.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "test/tag-filter-test.js",
 					"settings":
 					{
@@ -787,7 +906,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
 					"file": "test/find.test.js",
 					"settings":
 					{
@@ -813,7 +932,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 12,
 					"file": "test/greedy-endpoint-test.js",
 					"settings":
 					{
@@ -840,7 +959,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": "/tmp/subl stdin 77su7E.txt",
 					"settings":
 					{
@@ -866,7 +985,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 14,
 					"file": "/tmp/subl stdin F5tvvQ.txt",
 					"settings":
 					{
@@ -892,19 +1011,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 15,
 					"file": "test/contains-test.js",
 					"settings":
 					{
-						"buffer_size": 728,
+						"buffer_size": 815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								698,
-								698
+								374,
+								374
 							]
 						],
 						"settings":
@@ -919,7 +1038,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 16,
 					"file": "test/param-test.js",
 					"settings":
 					{
@@ -930,8 +1049,8 @@
 						"selection":
 						[
 							[
-								596,
-								596
+								292,
+								292
 							]
 						],
 						"settings":
@@ -946,7 +1065,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 17,
+					"file": "/tmp/subl stdin HNAKDT.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
 					"file": "lib/router.js",
 					"settings":
 					{
@@ -972,7 +1117,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 19,
 					"file": "tests/explicit-test.js",
 					"settings":
 					{
@@ -998,7 +1143,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 20,
 					"file": "tests/benchmark.js",
 					"settings":
 					{
@@ -1025,7 +1170,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 21,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1051,7 +1196,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 22,
 					"file": "lib/tree.js",
 					"settings":
 					{
@@ -1062,8 +1207,8 @@
 						"selection":
 						[
 							[
-								3139,
-								3139
+								260,
+								260
 							]
 						],
 						"settings":
@@ -1072,13 +1217,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2375.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 23,
 					"file": "package.json",
 					"settings":
 					{
@@ -1106,7 +1251,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 24,
 					"file": "/tmp/subl stdin voKAmo.txt",
 					"settings":
 					{
@@ -1132,7 +1277,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 25,
 					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
@@ -1158,7 +1303,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 26,
 					"file": "lib/index.js",
 					"settings":
 					{
@@ -1185,7 +1330,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 27,
 					"file": "lib/disposable.js",
 					"settings":
 					{
@@ -1212,7 +1357,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 28,
 					"file": "/tmp/subl stdin H5tzry.txt",
 					"settings":
 					{
@@ -1238,7 +1383,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 29,
 					"file": "examples/timeout.js",
 					"settings":
 					{
@@ -1265,7 +1410,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 30,
 					"file": "examples/signup.js",
 					"settings":
 					{
@@ -1291,7 +1436,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 31,
 					"file": "examples/funky-routes.js",
 					"settings":
 					{
@@ -1318,7 +1463,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 32,
 					"file": "node_modules/sift/sift.js",
 					"settings":
 					{
@@ -1345,7 +1490,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 33,
 					"file": "test/explicit-test.js",
 					"settings":
 					{
@@ -1366,13 +1511,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 23.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 34,
 					"file": "test/implicit-test.js",
 					"settings":
 					{
@@ -1399,7 +1544,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 35,
 					"file": "test/flattenCollections.js",
 					"settings":
 					{
@@ -1425,7 +1570,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 36,
 					"file": ".travis.yml",
 					"settings":
 					{
@@ -1451,7 +1596,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 37,
 					"file": "test/filter-test.js",
 					"settings":
 					{
@@ -1478,7 +1623,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 38,
 					"file": "/tmp/subl stdin q4m2nU.txt",
 					"settings":
 					{
@@ -1504,7 +1649,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 39,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1530,7 +1675,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 40,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1556,19 +1701,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 41,
 					"file": "test/greedy-test.js",
 					"settings":
 					{
-						"buffer_size": 1263,
+						"buffer_size": 1278,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								756,
-								756
+								271,
+								271
 							]
 						],
 						"settings":
@@ -1577,13 +1722,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 116.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 38,
+					"buffer": 42,
 					"file": "examples/overview.js",
 					"settings":
 					{
@@ -1609,7 +1754,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 39,
+					"buffer": 43,
 					"file": "test/benchmark.js",
 					"settings":
 					{
@@ -1636,7 +1781,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 40,
+					"buffer": 44,
 					"file": "build/syntax.ebnf",
 					"settings":
 					{
@@ -1662,7 +1807,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 41,
+					"buffer": 45,
 					"file": "/tmp/subl stdin ODgU9m.txt",
 					"settings":
 					{
