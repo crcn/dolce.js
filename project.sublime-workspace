@@ -52,10 +52,13 @@
 			}
 		},
 		{
+			"contents": "var crema  = require('crema'),\ntree 	   = require('./tree'),\nsift 	   = require('sift');\n\n\n\n\n\nvar collection = module.exports = function() {\n	\n	var _rootTree = tree(),\n	self = {},\n	_id = 0;\n\n	/**\n	 * the *actual* add method\n	 */\n\n	var _addRoute = self.add = function(route, value) {\n		\n		var tree, type, lastPath = route.channel.paths[route.channel.paths.length - 1].value;\n\n		//first lets establish whether or not the expression is OVERRIDING, or EXTENDING \n		if(lastPath == '*') {\n\n			type = 'before';\n\n			//remove the asterick\n			route.channel.paths.pop();\n\n		//everything AFTER this route is handleable by this data\n		} else if(lastPath == '**') {\n			\n			type = 'greedy';\n\n			route.channel.paths.pop();\n\n		} else if(lastPath == '***') {\n			\n			type = 'greedyEndpoint';\n\n			route.channel.paths.pop();\n		} else {\n			\n			type = 'after';\n\n		}\n\n		var thru = [], cthru = route.thru;\n\n		while(cthru) {\n			thru.unshift(cthru.channel.paths);\n			cthru = cthru.thru;\n		}\n\n		//next, let's find the tree this route belongs too\n		tree = _findTree(route.channel.paths, true);\n\n\n		//add the data to the tree obj\n		return tree.addListener[type]({\n\n			routeStr: crema.stringify(route),\n\n			//filterable tags\n			tags: route.tags,\n\n			//path to the route -- needed to fill in extra data\n			paths: route.channel.paths,\n\n			//explicit chain which gets expanded at runtime\n			thru: thru,\n\n			id: _id++,\n\n			//the callback function\n			value: value\n\n		}, type);\n\n	};\n\n	/**\n	 * returns TRUE if the given type exists\n	 */\n\n	self.contains = function(channel, ops) {\n\n		if(!ops) ops = {};\n\n		var child = _findTree(channel.paths);\n\n		return !!child ? !!_andSifter(ops, child.collections.after).length : false;\n	}\n\n	/**\n	 * returns collections and their chained data\n	 */\n\n	self.get = function(channel, ops) {\n		\n		if(!ops) ops = {};\n\n\n		//only allow path/to/collection in get vs pull blown parsing with metadata - not necessary\n		var chains = _chains(channel.paths, ops, true);\n\n		return {\n			paths: channel.paths,\n			tags: ops.tags,\n			chains: chains\n		}\n	};\n\n	/**\n	 * finds routes based on the filter tags given WITHOUT expanding them\n	 */\n\n	self.find = function(ops) {\n\n		var tagSifter, found = [];\n\n		if(ops.tags) {\n			tagSifter = _andSifter(ops);\n		} else \n		if(ops.siftTags) {\n			tagSifter = sift({ tags: ops.siftTags });\n		}\n\n\n\n		_rootTree.traverse(function(tree) {\n\n			if(tagSifter)\n			for(var i = tree.collections.after.length; i--;) {\n\n				var data = tree.collections.after[i];\n\n				if(tagSifter.test(data)) {\n					\n					found.push(data);\n\n					break;\n				}\n			}\n\n		});\n\n		return found;\n	}\n\n	//changes {tag:value,tag2:value} to [{tag:value},{tag2:value}]\n	var _tagsToArray = function(tagsObj) {\n			\n		var key, tag, tags = [];\n\n		for(key in tagsObj) {\n			\n			tag = {};\n			tag[key] = tagsObj[key];\n			tags.push(tag);\n\n		}\n\n		return tags;\n	}\n\n\n	/**\n	 */\n\n	var _andSifter = function(ops, target) {\n\n		var tags = ops.tags || {};\n\n		for(var name in tags) {\n			if(tags[name] === true) {\n				tags[name] = { $exists: true };\n			}\n		}\n\n		var $and = _tagsToArray(tags);\n\n		if(ops.siftTags) $and.push(ops.siftTags);\n\n		return sift({ tags: { $and: $and }}, target);\n\n	}\n\n	/**\n	 */\n\n	var _chains = function(paths, ops) {\n		\n\n		var child  = _rootTree.findChild(paths);\n\n\n		//route does NOT exist? return a greedy endpoint\n		if(!child) return [];//_greedyEndpoint(paths, tags);\n\n		var entireChain = _allCollections(child),\n\n		currentData,\n\n\n		endCollection = _andSifter(ops)(child.collections.after),\n\n		//the collections expanded with all the explicit / implicit / greedy chains\n		expandedChains = [],\n\n		expandedChain;\n\n\n		//now we need to expand the EXPLICIT chain. Stuff like pass -> thru -> route\n		for(var i = 0, n = endCollection.length; i < n; i++) {\n\n			currentData = endCollection[i];\n			\n			expandedChains.push((ops.expand == undefined || ops.expand == true) ? _chain(currentData, paths, entireChain) : currentData);\n		}\n\n\n\n		return expandedChains;\n	};\n\n	var _chain = function(data, paths, entireChain) {\n		\n		var chain = _chainSifter(data.tags, entireChain),\n		usedGreedyPaths = {};\n\n\n		//filter out any greedy middleware that's used more than once. This can cause problems\n		//for greedy middleware such as /**\n		return _expand(chain.concat(data), paths).filter(function(route) {\n\n			if(route.type != 'greedy') return true;\n			if(usedGreedyPaths[route.id]) return false;\n			return usedGreedyPaths[route.id] = true;\n\n		});\n	}\n\n	var _greedyEndpoint = function(paths, tags) {\n		\n		var tree;\n\n		for(var i = paths.length; i--;) {\n			if(tree = _rootTree.findChild(paths.slice(0, i))) break;	\n		}\n\n		if(!tree) return [];\n\n		var chain = _chainSifter(tags || {}, _greedyCollections(tree));\n\n		return chain;\n\n	}\n\n	var _copy = function(target) {\n		var to = {};\n		for(var i in target) {\n			to[i] = target[i];\n		}\n		return to;\n	}\n\n	/**\n	 */\n\n	var _expand = function(chain, paths) {\n		\n		var j, n2,  i = 0, n = chain.length;\n\n\n		var expanded = [];\n\n\n		for(; i < n; i++) {\n			\n			var data = chain[i];\n\n			var params = _params(data.paths, paths),\n			subChain = [];\n			\n			for(j = 0, n2 = data.thru.length; j < n2; j++) {\n					\n				subChain.push(_thru(_fillPaths(data.thru[j], params), data.tags));\n\n			}\n\n			expanded = expanded.concat.apply(expanded, subChain);\n\n			expanded.push({\n				routeStr: data.routeStr,\n				paths: data.paths,\n				cmpPath: paths,\n				params: params,\n				id: data.id,\n				tags: data.tags,\n				value: data.value,\n				type: data.type\n			});\n		}\n\n		return expanded;\n	}\n\n	/**\n	 */\n\n	var _chainSifter = function(tags, target) {\n\n		var test = function(target) {\n			\n			return target.filter(function(a) {\n\n				var atags = a.tags, av, tv;\n\n				//metadata in the atags (chain) must match the tags given\n\n				//examples of this:\n				//-method a/**\n				//-method=POST a  --- a/** -> a\n				//a --- a (would not go through a/**)\n				if(atags.unfilterable) return true;\n\n				for(var tagName in atags) {\n\n					av = atags[tagName];\n					tv = tags[tagName];\n\n					//MUST have a value - atags\n\n					//Example:\n\n					//-method=POST a/**\n\n					//matches: \n					//-method=POST a\n\n					//does not match:\n					//-method a\n\n					if(av != tv && (!tv || av !== true) && av != '*')  return false;\n				}\n\n				return true;\n			});\n		}\n\n		//array exists? return the result\n		if(target) return test(target);\n\n		return test;\n	}\n\n	/**\n	 */\n\n	var _thru = function(paths, tags) {\n\n		var child  = _rootTree.findChild(paths);\n\n		if(!child) return [];\n\n\n		var chainSifter = _chainSifter(tags);\n\n		chain = chainSifter(_allCollections(child));\n\n\n		//need to sort the tags because a match for say.. method=DELETE matches both method, and method=DELETE\n		//NOTE - chainSifter was previously used here. Since it's EXPLICIT, we do NOT want to filter out the routes.\n		var filteredChildren = child.collections.after.sort(function(a, b) {\n\n			return _scoreTags(a.tags, tags) > _scoreTags(b.tags, tags) ? -1 : 1;\n\n		});\n\n\n\n		//return only ONE item to go through - this is the best match.\n		return _expand(chain.concat(filteredChildren[0]), paths);\n	}\n\n	/**\n	 * ranks data based on how similar tags are\n	 */\n\n	var _scoreTags = function(tags, match) {\n		var score = 0;\n\n\n		for(var tag in match) {\n\n			var tagV = tags[tag];\n			\n			if(tagV == match[tag]) {\n\n				score += 2;\n\n			} else \n			if(tagV) {\n\n				score += 1;\n\n			}\n		}\n\n		return score;\n	}\n\n	/**\n	 * hydrates chain, e.g.,  validate/:firstName -> add/user/:firstName\n	 */\n\n	var _fillPaths = function(paths, params) {\n		var i, path, n = paths.length, newPaths = [];\n\n		for(i = 0; i < n; i++) {\n			\n			path = paths[i];\n\n			newPaths.push({\n				value: path.param ? params[path.value] : path.value,\n				param: path.param\n			});\n		}\n\n		return newPaths;\n	}\n\n	/**\n	 * returns the parameters associated with the found path against the queried path, e.g., add/:name/:last and add/craig/condon \n	 */\n\n	var _params = function(treePaths, queryPaths) {\n		\n		var i, treePath, queryPath, params = {};\n\n		for(i = treePaths.length; i--;) {\n\n			treePath = treePaths[i];\n			queryPath = queryPaths[i];\n\n			if(treePath.param) {\n\n				params[treePath.value] = queryPath.value;\n\n			}\n\n		}\n\n\n		return params;\n	};\n\n	/**\n	 */\n\n	var _greedyCollections = function(tree) {\n		\n		var currentParent = tree,\n		collections = [],\n		cpath;\n\n		while(currentParent) {\n			 \n			cpath = currentParent.pathStr();\n\n			collections = currentParent.collections.greedy.concat(collections);\n\n			currentParent = currentParent.parent();\n		}\n\n		return collections;\n	};\n\n	/**\n	 */\n\n	var _allCollections = function(tree) {\n		\n		return _greedyCollections(tree).concat(tree.collections.before);\n\n	}\n\n\n	/**\n	 * finds the deepest tree associated with the given paths\n	 */\n\n\n	var _findTree = function(paths, createIfNotFound) {\n		\n		var i, path, n = paths.length, currentTree = _rootTree;\n\n		for(i = 0; i < n; i++) {\n			\n			path = paths[i];\n\n			if(!(currentTree = currentTree.child(path, createIfNotFound))) break;\n\n		}\n\n		return currentTree;\n\n	};\n\n\n\n	return self;\n}\n\n",
 			"file": "lib/collection.js",
+			"file_size": 8897,
+			"file_write_time": 1328388946000000,
 			"settings":
 			{
-				"buffer_size": 8834,
+				"buffer_size": 8900,
 				"line_ending": "Unix"
 			}
 		},
@@ -148,6 +151,14 @@
 			}
 		},
 		{
+			"file": "/tmp/subl stdin l1WIfe.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"contents": "var vows = require('vows'),\ndolce = require('../'),\nassert = require('assert'),\nflatten = require('./flattenCollections');\n\n\nvows.describe('Param-based routes').addBatch({\n	\n	'A mix of parameterized routes': {\n		\n		topic: function() {\n			var collection = require('./test-helper').collection({\n				'a/b':1,\n				':a/b': 1,\n				'a/:b': 1,\n				':a/:b': 1,\n				'a/b/c':1,\n				':a/b/c':1,\n				'a/:b/c':1,\n				'a/b/:c':1,\n				':a/:b/:c':1\n\n			});\n\n			return collection;\n		},\n\n		'has a/b': function(topic) {\n			assert.equal(flatten(topic.get('a/b')).length, 1); //1 \n		},\n\n		'has aa/b': function(topic) {\n			assert.equal(flatten(topic.get('aa/b')).length, 1); //1 \n		},\n\n		'has a/bb': function(topic) {\n			assert.equal(flatten(topic.get('a/bb')).length, 1); //1 \n		},\n\n		'has aa/bb': function(topic) {\n			assert.equal(flatten(topic.get('aa/bb')).length, 1); //1 \n		}\n\n	}\n}).export(module);",
 			"file": "test/param-test.js",
 			"file_size": 881,
@@ -205,7 +216,7 @@
 			"file": "lib/tree.js",
 			"settings":
 			{
-				"buffer_size": 3780,
+				"buffer_size": 3881,
 				"line_ending": "Unix"
 			}
 		},
@@ -476,6 +487,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_findChildren",
+			"_chains",
 			"_scoreTags",
 			"_params",
 			"params:",
@@ -726,15 +739,15 @@
 					"file": "lib/collection.js",
 					"settings":
 					{
-						"buffer_size": 8834,
+						"buffer_size": 8900,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6925,
-								6925
+								3766,
+								3766
 							]
 						],
 						"settings":
@@ -743,7 +756,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6841.0,
+						"translation.y": 1606.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1022,8 +1035,8 @@
 						"selection":
 						[
 							[
-								374,
-								374
+								793,
+								793
 							]
 						],
 						"settings":
@@ -1039,6 +1052,32 @@
 				},
 				{
 					"buffer": 16,
+					"file": "/tmp/subl stdin l1WIfe.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
 					"file": "test/param-test.js",
 					"settings":
 					{
@@ -1065,7 +1104,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"file": "/tmp/subl stdin HNAKDT.txt",
 					"settings":
 					{
@@ -1091,7 +1130,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "lib/router.js",
 					"settings":
 					{
@@ -1117,7 +1156,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "tests/explicit-test.js",
 					"settings":
 					{
@@ -1143,7 +1182,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "tests/benchmark.js",
 					"settings":
 					{
@@ -1170,7 +1209,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1196,19 +1235,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "lib/tree.js",
 					"settings":
 					{
-						"buffer_size": 3780,
+						"buffer_size": 3881,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								260,
-								260
+								3437,
+								3437
 							]
 						],
 						"settings":
@@ -1217,13 +1256,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2266.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "package.json",
 					"settings":
 					{
@@ -1251,7 +1290,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"file": "/tmp/subl stdin voKAmo.txt",
 					"settings":
 					{
@@ -1277,7 +1316,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 26,
 					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
@@ -1303,7 +1342,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 27,
 					"file": "lib/index.js",
 					"settings":
 					{
@@ -1330,7 +1369,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "lib/disposable.js",
 					"settings":
 					{
@@ -1357,7 +1396,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "/tmp/subl stdin H5tzry.txt",
 					"settings":
 					{
@@ -1383,7 +1422,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "examples/timeout.js",
 					"settings":
 					{
@@ -1410,7 +1449,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "examples/signup.js",
 					"settings":
 					{
@@ -1436,7 +1475,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "examples/funky-routes.js",
 					"settings":
 					{
@@ -1463,7 +1502,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "node_modules/sift/sift.js",
 					"settings":
 					{
@@ -1490,7 +1529,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "test/explicit-test.js",
 					"settings":
 					{
@@ -1517,7 +1556,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 35,
 					"file": "test/implicit-test.js",
 					"settings":
 					{
@@ -1544,7 +1583,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 36,
 					"file": "test/flattenCollections.js",
 					"settings":
 					{
@@ -1570,7 +1609,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 37,
 					"file": ".travis.yml",
 					"settings":
 					{
@@ -1596,7 +1635,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 38,
 					"file": "test/filter-test.js",
 					"settings":
 					{
@@ -1623,7 +1662,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 38,
+					"buffer": 39,
 					"file": "/tmp/subl stdin q4m2nU.txt",
 					"settings":
 					{
@@ -1640,32 +1679,6 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 39,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1702,6 +1715,32 @@
 				},
 				{
 					"buffer": 41,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 42,
 					"file": "test/greedy-test.js",
 					"settings":
 					{
@@ -1728,7 +1767,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 42,
+					"buffer": 43,
 					"file": "examples/overview.js",
 					"settings":
 					{
@@ -1754,7 +1793,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 43,
+					"buffer": 44,
 					"file": "test/benchmark.js",
 					"settings":
 					{
@@ -1781,7 +1820,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 44,
+					"buffer": 45,
 					"file": "build/syntax.ebnf",
 					"settings":
 					{
@@ -1807,7 +1846,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 45,
+					"buffer": 46,
 					"file": "/tmp/subl stdin ODgU9m.txt",
 					"settings":
 					{
