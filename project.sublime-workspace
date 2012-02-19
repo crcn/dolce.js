@@ -55,7 +55,15 @@
 			"file": "lib/collection.js",
 			"settings":
 			{
-				"buffer_size": 8955,
+				"buffer_size": 9235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/remove-test.js",
+			"settings":
+			{
+				"buffer_size": 748,
 				"line_ending": "Unix"
 			}
 		},
@@ -237,7 +245,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 477,
+				"buffer_size": 415,
 				"line_ending": "Unix"
 			}
 		},
@@ -446,7 +454,7 @@
 			"file": "test/test-helper.js",
 			"settings":
 			{
-				"buffer_size": 487,
+				"buffer_size": 602,
 				"line_ending": "Unix"
 			}
 		},
@@ -455,6 +463,14 @@
 			"settings":
 			{
 				"buffer_size": 133,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin NIyr0i.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -540,6 +556,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_andSifter",
+			"add:",
+			"add",
 			"console.",
 			"_findTree",
 			"usedGr",
@@ -664,10 +683,7 @@
 			"call",
 			"call(",
 			"conso",
-			"console.l",
-			"module",
-			".module",
-			"modules"
+			"console.l"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -686,7 +702,7 @@
 	"groups":
 	[
 		{
-			"selected": 53,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -800,15 +816,15 @@
 					"file": "lib/collection.js",
 					"settings":
 					{
-						"buffer_size": 8955,
+						"buffer_size": 9235,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1506,
-								1509
+								2258,
+								2258
 							]
 						],
 						"settings":
@@ -817,13 +833,40 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 841.0,
+						"translation.y": 1276.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
+					"file": "test/remove-test.js",
+					"settings":
+					{
+						"buffer_size": 748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								450,
+								450
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "/tmp/subl stdin j5i7Tg.txt",
 					"settings":
 					{
@@ -849,7 +892,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "/tmp/subl stdin DIgrf8.txt",
 					"settings":
 					{
@@ -875,7 +918,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "/tmp/subl stdin epcqXf.txt",
 					"settings":
 					{
@@ -901,7 +944,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "/tmp/subl stdin 9fmw65.txt",
 					"settings":
 					{
@@ -927,7 +970,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "/tmp/subl stdin JnX4kb.txt",
 					"settings":
 					{
@@ -953,7 +996,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "/tmp/subl stdin 5wLUuA.txt",
 					"settings":
 					{
@@ -979,7 +1022,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "test/tag-filter-test.js",
 					"settings":
 					{
@@ -1006,7 +1049,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "test/find.test.js",
 					"settings":
 					{
@@ -1032,7 +1075,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "test/greedy-endpoint-test.js",
 					"settings":
 					{
@@ -1059,7 +1102,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "/tmp/subl stdin 77su7E.txt",
 					"settings":
 					{
@@ -1085,7 +1128,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "/tmp/subl stdin F5tvvQ.txt",
 					"settings":
 					{
@@ -1111,7 +1154,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "test/contains-test.js",
 					"settings":
 					{
@@ -1138,7 +1181,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"file": "/tmp/subl stdin tQtbQu.txt",
 					"settings":
 					{
@@ -1164,7 +1207,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "/tmp/subl stdin l1WIfe.txt",
 					"settings":
 					{
@@ -1190,7 +1233,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "test/param-test.js",
 					"settings":
 					{
@@ -1201,8 +1244,8 @@
 						"selection":
 						[
 							[
-								292,
-								292
+								558,
+								499
 							]
 						],
 						"settings":
@@ -1217,7 +1260,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "/tmp/subl stdin HNAKDT.txt",
 					"settings":
 					{
@@ -1243,7 +1286,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"file": "lib/router.js",
 					"settings":
 					{
@@ -1269,7 +1312,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "tests/explicit-test.js",
 					"settings":
 					{
@@ -1295,7 +1338,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "tests/benchmark.js",
 					"settings":
 					{
@@ -1322,7 +1365,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1348,7 +1391,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 26,
 					"file": "lib/tree.js",
 					"settings":
 					{
@@ -1359,8 +1402,8 @@
 						"selection":
 						[
 							[
-								2325,
-								2325
+								1257,
+								1260
 							]
 						],
 						"settings":
@@ -1369,17 +1412,17 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 511.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 27,
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 477,
+						"buffer_size": 415,
 						"regions":
 						{
 						},
@@ -1393,7 +1436,7 @@
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -1403,7 +1446,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "/tmp/subl stdin voKAmo.txt",
 					"settings":
 					{
@@ -1429,7 +1472,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
@@ -1455,7 +1498,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "lib/index.js",
 					"settings":
 					{
@@ -1482,7 +1525,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "/tmp/subl stdin 2yODJT.txt",
 					"settings":
 					{
@@ -1508,7 +1551,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "lib/disposable.js",
 					"settings":
 					{
@@ -1535,7 +1578,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "/tmp/subl stdin H5tzry.txt",
 					"settings":
 					{
@@ -1561,7 +1604,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "examples/timeout.js",
 					"settings":
 					{
@@ -1588,7 +1631,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 35,
 					"file": "examples/signup.js",
 					"settings":
 					{
@@ -1614,7 +1657,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 36,
 					"file": "examples/funky-routes.js",
 					"settings":
 					{
@@ -1641,7 +1684,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 37,
 					"file": "node_modules/sift/sift.js",
 					"settings":
 					{
@@ -1668,7 +1711,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 38,
 					"file": "test/explicit-test.js",
 					"settings":
 					{
@@ -1679,8 +1722,8 @@
 						"selection":
 						[
 							[
-								309,
-								309
+								125,
+								1194
 							]
 						],
 						"settings":
@@ -1695,7 +1738,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 38,
+					"buffer": 39,
 					"file": "test/implicit-test.js",
 					"settings":
 					{
@@ -1722,7 +1765,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 39,
+					"buffer": 40,
 					"file": "test/extends-test.js",
 					"settings":
 					{
@@ -1749,7 +1792,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 40,
+					"buffer": 41,
 					"file": "/tmp/subl stdin Dp5MHe.txt",
 					"settings":
 					{
@@ -1775,7 +1818,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 41,
+					"buffer": 42,
 					"file": "test/flattenCollections.js",
 					"settings":
 					{
@@ -1801,7 +1844,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 42,
+					"buffer": 43,
 					"file": ".travis.yml",
 					"settings":
 					{
@@ -1827,7 +1870,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 43,
+					"buffer": 44,
 					"file": "test/filter-test.js",
 					"settings":
 					{
@@ -1854,7 +1897,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 44,
+					"buffer": 45,
 					"file": "/tmp/subl stdin q4m2nU.txt",
 					"settings":
 					{
@@ -1871,32 +1914,6 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 45,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1933,6 +1950,32 @@
 				},
 				{
 					"buffer": 47,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 48,
 					"file": "test/greedy-test.js",
 					"settings":
 					{
@@ -1959,7 +2002,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 48,
+					"buffer": 49,
 					"file": "examples/overview.js",
 					"settings":
 					{
@@ -1985,7 +2028,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 49,
+					"buffer": 50,
 					"file": "test/benchmark.js",
 					"settings":
 					{
@@ -2012,7 +2055,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 50,
+					"buffer": 51,
 					"file": "build/syntax.ebnf",
 					"settings":
 					{
@@ -2038,7 +2081,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 51,
+					"buffer": 52,
 					"file": "/tmp/subl stdin ODgU9m.txt",
 					"settings":
 					{
@@ -2064,19 +2107,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 52,
+					"buffer": 53,
 					"file": "test/test-helper.js",
 					"settings":
 					{
-						"buffer_size": 487,
+						"buffer_size": 602,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								96,
-								96
+								506,
+								506
 							]
 						],
 						"settings":
@@ -2091,7 +2134,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 53,
+					"buffer": 54,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -2104,6 +2147,32 @@
 							[
 								82,
 								82
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 55,
+					"file": "/tmp/subl stdin NIyr0i.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
