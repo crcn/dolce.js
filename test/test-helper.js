@@ -12,7 +12,7 @@ exports.collection = function(target) {
 		})
 	}
 
-	var oldGet = col.get, oldContains = col.contains;
+	var oldGet = col.get, oldContains = col.contains, oldRemove = col.remove;
 
 	col.get = function(type, ops) {
 		return oldGet(crema.parseChannel(type), ops);
@@ -20,6 +20,10 @@ exports.collection = function(target) {
 
 	col.contains = function(type, ops) {
 		return oldContains(crema.parseChannel(type), ops);
+	}
+
+	col.remove = function(type, ops) {
+		return oldRemove(crema.parseChannel(type), ops);
 	}
 
 	return col;
