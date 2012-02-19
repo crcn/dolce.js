@@ -13,18 +13,18 @@ vows.describe('Implicit Routes').addBatch({
 				'b': 1,
 				'c': 1,
 				'd': 1,
-				'a/*': 1,
-				'a -> b/*': 1,
-				'b -> c/*': 1,
-				'c -> d/*': 1,
+				'a/+': 1,
+				'a -> b/+': 1,
+				'b -> c/+': 1,
+				'c -> d/+': 1,
 				'a -> aa': 1,
 				'a -> b -> bb': 1,
 				'a -> b -> c -> cc': 1,
 				'a -> b -> c -> d -> dd': 1,
 				'aa/*': 1,
 				'aa -> bb/*': 1,
-				'aa -> bb -> cc/*': 1,
-				'aa -> bb -> cc -> dd/*':1
+				'aa -> bb -> cc/+': 1,
+				'aa -> bb -> cc -> dd/+':1
 			});
 
 

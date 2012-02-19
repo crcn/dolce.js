@@ -5,7 +5,7 @@ flatten = require('./flattenCollections');
 
 vows.describe('Greedy Routes').addBatch({
 	
-	'An explicit collection of routes': {
+	'A set of greedy routes': {
 		
 		topic: function() {
 			var collection = require('./test-helper').collection({

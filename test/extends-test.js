@@ -19,12 +19,13 @@ vows.describe('Extends Routes').addBatch({
 			collection.add(crema('a/*').pop(), 1);
 			collection.add(crema('a/*').pop(), 1);
 			collection.add(crema('a/*').pop(), 1);
+			collection.add(crema('-ab a/*').pop(), 1);
 
 			return collection;
 		},
 
 		'a length = 3': function(topic) {
-			assert.equal(flatten(topic.get('a')).length, 6); 
+			assert.equal(flatten(topic.get('a')).length, 7); 
 		}
 	}
 
