@@ -11,22 +11,26 @@ vows.describe('Extends Routes').addBatch({
 		topic: function() {
 
 			var collection = require('./test-helper').collection({
-				'a':1,
-				'a/*':1
+				'-m=a a':1,
+				'-m=bbbb a':1
 			});
 
+			collection.add(crema('-m=a a/*').pop(), 1);
 			collection.add(crema('a/*').pop(), 1);
-			collection.add(crema('a/*').pop(), 1);
-			collection.add(crema('a/*').pop(), 1);
-			collection.add(crema('a/*').pop(), 1);
-			collection.add(crema('-ab a/*').pop(), 1);
+			collection.add(crema('-m=a a/*').pop(), 1);
+			collection.add(crema('-m=a a/*').pop(), 1);
+			collection.add(crema('-m=bbbb a/*').pop(), 1);
 
 			return collection;
 		},
 
-		'a length = 3': function(topic) {
-			assert.equal(flatten(topic.get('a')).length, 7); 
-		}
+		'a length': function(topic) {
+			assert.equal(flatten(topic.get('a')).length, 8); 
+		},
+
+		'a filtered': function(topic) {
+			assert.equal(flatten(topic.get('a', {tags: {m:'a'} })).length, 5); 
+		},
 	}
 
 }).export(module);
