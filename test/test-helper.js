@@ -15,15 +15,15 @@ exports.collection = function(target) {
 	var oldGet = col.get, oldContains = col.contains, oldRemove = col.remove;
 
 	col.get = function(type, ops) {
-		return oldGet(crema.parseChannel(type), ops);
+		return oldGet(crema.parsePath(type), ops);
 	}
 
 	col.contains = function(type, ops) {
-		return oldContains(crema.parseChannel(type), ops);
+		return oldContains(crema.parsePath(type), ops);
 	}
 
 	col.remove = function(type, ops) {
-		return oldRemove(crema.parseChannel(type), ops);
+		return oldRemove(crema.parsePath(type), ops);
 	}
 
 	return col;
