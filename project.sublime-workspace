@@ -271,7 +271,7 @@
 			"file": "lib/tree.js",
 			"settings":
 			{
-				"buffer_size": 3582,
+				"buffer_size": 3961,
 				"line_ending": "Unix"
 			}
 		},
@@ -512,6 +512,14 @@
 			}
 		},
 		{
+			"file": "/tmp/subl stdin Y5DX8L.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": ".cupboard",
 			"settings":
 			{
@@ -599,7 +607,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			""
@@ -610,6 +618,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_findChild",
 			"paths",
 			"path",
 			"channel",
@@ -736,8 +745,7 @@
 			"Listeners",
 			"callback",
 			"listeners",
-			"_addListener",
-			"concat"
+			"_addListener"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -757,7 +765,7 @@
 	"groups":
 	[
 		{
-			"selected": 59,
+			"selected": 30,
 			"sheets":
 			[
 				{
@@ -904,8 +912,8 @@
 						"selection":
 						[
 							[
-								1087,
-								1091
+								517,
+								517
 							]
 						],
 						"settings":
@@ -914,7 +922,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 60.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1695,15 +1703,15 @@
 					"file": "lib/tree.js",
 					"settings":
 					{
-						"buffer_size": 3582,
+						"buffer_size": 3961,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								591,
-								591
+								3184,
+								3184
 							]
 						],
 						"settings":
@@ -1712,7 +1720,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 136.0,
+						"translation.y": 1920.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -2487,6 +2495,32 @@
 				},
 				{
 					"buffer": 60,
+					"file": "/tmp/subl stdin Y5DX8L.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 61,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -2512,7 +2546,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 61,
+					"buffer": 62,
 					"file": "/tmp/subl stdin NIyr0i.txt",
 					"settings":
 					{
