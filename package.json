@@ -1,7 +1,7 @@
 {
     "name": "dolce",
     "description": "Collections with syntactic sugar",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "repository": {
         "url": ""
     },
@@ -10,7 +10,9 @@
     },
     "dependencies": {
         "crema": "*",
-        "sift": "*"
+        "sift": "*",
+        "underscore": "1.2.x",
+        "ebnf-diagram": "0.1.x"
     },
     "devDependencies": {
         "benchmark": "*",

@@ -26,7 +26,8 @@ vows.describe('Greedy Routes').addBatch({
 
 				'aa': 1,
 				'-perm aa -> /**': 1,
-				'-perm a/bbb': 2
+				'-perm -unfilterable a/bbb/**': 1,
+				'-method=POST a/bbb': 1,
 			});
 
 			return collection;
@@ -61,7 +62,7 @@ vows.describe('Greedy Routes').addBatch({
 		},
 
 		'a/bbb': function(topic) {
-			assert.equal(flatten(topic.get('a/bbb')).length, 4); 
+			assert.equal(flatten(topic.get('a/bbb')).length, 5); 
 		}
 	}
 
