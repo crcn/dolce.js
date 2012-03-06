@@ -63,7 +63,15 @@
 			"file": "lib/collection.js",
 			"settings":
 			{
-				"buffer_size": 9703,
+				"buffer_size": 10269,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin H1VdbL.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -475,7 +483,7 @@
 			"file": "test/greedy-test.js",
 			"settings":
 			{
-				"buffer_size": 1422,
+				"buffer_size": 1657,
 				"line_ending": "Unix"
 			}
 		},
@@ -626,6 +634,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_andSifter",
+			"_siftChain",
+			"_siftCh",
+			"_siftChain",
+			"a/bb",
 			"_thru",
 			"_expand",
 			"_thru",
@@ -748,12 +761,7 @@
 			"_filterData",
 			"child",
 			"childPaths",
-			"_middleware",
-			"useOr",
-			"findChild",
-			"_fillPaths",
-			"useOr",
-			"_filterData"
+			"_middleware"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -913,15 +921,15 @@
 					"file": "lib/collection.js",
 					"settings":
 					{
-						"buffer_size": 9703,
+						"buffer_size": 10269,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6864,
-								6864
+								7327,
+								7327
 							]
 						],
 						"settings":
@@ -930,13 +938,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5431.0,
+						"translation.y": 5731.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
+					"file": "/tmp/subl stdin H1VdbL.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"settings":
 					{
 						"buffer_size": 5543,
@@ -1103,7 +1137,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "/tmp/subl stdin W57N8o.txt",
 					"settings":
 					{
@@ -1129,7 +1163,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "test/remove-test.js",
 					"settings":
 					{
@@ -1140,8 +1174,8 @@
 						"selection":
 						[
 							[
-								450,
-								450
+								422,
+								422
 							]
 						],
 						"settings":
@@ -1156,7 +1190,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "/tmp/subl stdin 1gq6vU.txt",
 					"settings":
 					{
@@ -1182,7 +1216,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "/tmp/subl stdin j5i7Tg.txt",
 					"settings":
 					{
@@ -1208,7 +1242,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "/tmp/subl stdin DIgrf8.txt",
 					"settings":
 					{
@@ -1234,7 +1268,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "/tmp/subl stdin epcqXf.txt",
 					"settings":
 					{
@@ -1260,7 +1294,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "/tmp/subl stdin 9fmw65.txt",
 					"settings":
 					{
@@ -1286,7 +1320,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "/tmp/subl stdin JnX4kb.txt",
 					"settings":
 					{
@@ -1312,7 +1346,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "/tmp/subl stdin 5wLUuA.txt",
 					"settings":
 					{
@@ -1338,7 +1372,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "test/tag-filter-test.js",
 					"settings":
 					{
@@ -1365,7 +1399,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"file": "test/find.test.js",
 					"settings":
 					{
@@ -1391,7 +1425,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "test/greedy-endpoint-test.js",
 					"settings":
 					{
@@ -1418,7 +1452,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "/tmp/subl stdin 77su7E.txt",
 					"settings":
 					{
@@ -1444,7 +1478,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "/tmp/subl stdin F5tvvQ.txt",
 					"settings":
 					{
@@ -1470,7 +1504,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"file": "test/contains-test.js",
 					"settings":
 					{
@@ -1497,7 +1531,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "/tmp/subl stdin tQtbQu.txt",
 					"settings":
 					{
@@ -1523,7 +1557,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "/tmp/subl stdin l1WIfe.txt",
 					"settings":
 					{
@@ -1549,7 +1583,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"file": "test/param-test.js",
 					"settings":
 					{
@@ -1576,7 +1610,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 26,
 					"file": "/tmp/subl stdin HNAKDT.txt",
 					"settings":
 					{
@@ -1602,7 +1636,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 27,
 					"file": "lib/router.js",
 					"settings":
 					{
@@ -1628,7 +1662,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "tests/explicit-test.js",
 					"settings":
 					{
@@ -1654,7 +1688,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "tests/benchmark.js",
 					"settings":
 					{
@@ -1681,7 +1715,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1707,7 +1741,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "lib/tree.js",
 					"settings":
 					{
@@ -1728,13 +1762,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1920.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "/tmp/subl stdin E5kju8.txt",
 					"settings":
 					{
@@ -1760,7 +1794,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "package.json",
 					"settings":
 					{
@@ -1788,7 +1822,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "/tmp/subl stdin 0p3GVx.txt",
 					"settings":
 					{
@@ -1814,7 +1848,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 35,
 					"file": "/tmp/subl stdin voKAmo.txt",
 					"settings":
 					{
@@ -1840,7 +1874,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 36,
 					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
@@ -1866,7 +1900,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 37,
 					"file": "lib/index.js",
 					"settings":
 					{
@@ -1893,7 +1927,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 38,
 					"file": "/tmp/subl stdin 2yODJT.txt",
 					"settings":
 					{
@@ -1919,7 +1953,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 38,
+					"buffer": 39,
 					"file": "lib/disposable.js",
 					"settings":
 					{
@@ -1946,7 +1980,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 39,
+					"buffer": 40,
 					"file": "/tmp/subl stdin H5tzry.txt",
 					"settings":
 					{
@@ -1972,7 +2006,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 40,
+					"buffer": 41,
 					"file": "examples/timeout.js",
 					"settings":
 					{
@@ -1999,7 +2033,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 41,
+					"buffer": 42,
 					"file": "examples/signup.js",
 					"settings":
 					{
@@ -2025,7 +2059,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 42,
+					"buffer": 43,
 					"file": "examples/funky-routes.js",
 					"settings":
 					{
@@ -2052,7 +2086,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 43,
+					"buffer": 44,
 					"file": "node_modules/sift/sift.js",
 					"settings":
 					{
@@ -2079,7 +2113,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 44,
+					"buffer": 45,
 					"file": "test/explicit-test.js",
 					"settings":
 					{
@@ -2106,7 +2140,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 45,
+					"buffer": 46,
 					"file": "test/implicit-test.js",
 					"settings":
 					{
@@ -2133,7 +2167,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 46,
+					"buffer": 47,
 					"file": "test/extends-test.js",
 					"settings":
 					{
@@ -2160,7 +2194,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 47,
+					"buffer": 48,
 					"file": "/tmp/subl stdin aoC5RM.txt",
 					"settings":
 					{
@@ -2186,7 +2220,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 48,
+					"buffer": 49,
 					"file": "/tmp/subl stdin Dp5MHe.txt",
 					"settings":
 					{
@@ -2212,7 +2246,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 49,
+					"buffer": 50,
 					"file": "test/flattenCollections.js",
 					"settings":
 					{
@@ -2238,7 +2272,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 50,
+					"buffer": 51,
 					"file": ".travis.yml",
 					"settings":
 					{
@@ -2264,7 +2298,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 51,
+					"buffer": 52,
 					"file": "test/filter-test.js",
 					"settings":
 					{
@@ -2275,8 +2309,8 @@
 						"selection":
 						[
 							[
-								304,
-								304
+								502,
+								479
 							]
 						],
 						"settings":
@@ -2291,7 +2325,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 52,
+					"buffer": 53,
 					"file": "/tmp/subl stdin q4m2nU.txt",
 					"settings":
 					{
@@ -2308,32 +2342,6 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 53,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -2370,24 +2378,23 @@
 				},
 				{
 					"buffer": 55,
-					"file": "test/greedy-test.js",
 					"settings":
 					{
-						"buffer_size": 1422,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								626,
-								626
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -2397,6 +2404,33 @@
 				},
 				{
 					"buffer": 56,
+					"file": "test/greedy-test.js",
+					"settings":
+					{
+						"buffer_size": 1657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1543,
+								1543
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 212.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 57,
 					"file": "examples/overview.js",
 					"settings":
 					{
@@ -2422,7 +2456,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 57,
+					"buffer": 58,
 					"file": "test/benchmark.js",
 					"settings":
 					{
@@ -2449,7 +2483,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 58,
+					"buffer": 59,
 					"file": "build/syntax.ebnf",
 					"settings":
 					{
@@ -2475,7 +2509,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 59,
+					"buffer": 60,
 					"file": "/tmp/subl stdin ODgU9m.txt",
 					"settings":
 					{
@@ -2501,7 +2535,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 60,
+					"buffer": 61,
 					"file": "test/test-helper.js",
 					"settings":
 					{
@@ -2528,7 +2562,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 61,
+					"buffer": 62,
 					"file": "/tmp/subl stdin Y5DX8L.txt",
 					"settings":
 					{
@@ -2554,7 +2588,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 62,
+					"buffer": 63,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -2580,7 +2614,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 63,
+					"buffer": 64,
 					"file": "/tmp/subl stdin NIyr0i.txt",
 					"settings":
 					{
