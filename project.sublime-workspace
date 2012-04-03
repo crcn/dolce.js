@@ -31,7 +31,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 3238,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -39,7 +39,7 @@
 			"file": "rules.md",
 			"settings":
 			{
-				"buffer_size": 47,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +63,15 @@
 			"file": "lib/collection.js",
 			"settings":
 			{
-				"buffer_size": 10269,
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin 211LM8.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -76,10 +84,10 @@
 			}
 		},
 		{
-			"contents": "Searching 484 files for \"channel\" (case sensitive)\n\n/Users/craig/Dropbox/Developer/Public/dolce/README.md:\n   68  ```\n   69  \n   70: ### .get(channel[, ops])\n   71  \n   72  Returns a collection based on the params given\n   73  \n   74: - `channel` - the path to the value, e.g., 'add/user', 'validate/some/stuff'\n   75  - `ops` - the options for fetching data\n   76  	- `tags` - the tags to filter against\n   ..\n  121  ```\n  122  \n  123: ### .contains(channel[, ops])\n  124  \n  125: TRUE if the given channel exists in the collection. API is the same as `.get`\n  126  \n  127  \n\n/Users/craig/Dropbox/Developer/Public/dolce/build/syntax.ebnf:\n    1  \"\" {\n    2: syntax       = [type]  { tag }  channel { '->' channel }. \n    3  tag 	     = '-' name [ '=' value ].          \n    4: channel	     = ['/'] { [':'] name '/' } ['*'|'**'].\n    5  }\n\n/Users/craig/Dropbox/Developer/Public/dolce/dolce/README.md:\n   68  ```\n   69  \n   70: ### .get(channel[, ops])\n   71  \n   72  Returns a collection based on the params given\n   73  \n   74: - `channel` - the path to the value, e.g., 'add/user', 'validate/some/stuff'\n   75  - `ops` - the options for fetching data\n   76  	- `tags` - the tags to filter against\n   ..\n  121  ```\n  122  \n  123: ### .contains(channel[, ops])\n  124  \n  125: TRUE if the given channel exists in the collection. API is the same as `.get`\n  126  \n  127  \n\n/Users/craig/Dropbox/Developer/Public/dolce/lib/collection.js:\n  102  \n  103  		return {\n  104: 			paths: channel.paths,\n  105  			tags: ops.tags,\n  106  			chains: chains\n  ...\n  113  	 */\n  114  \n  115: 	self.remove = function(channel, ops) {\n  116  \n  117: 		var child = _findTree(channel.paths),\n  118  		sifter = _andSifter(ops);\n  119  \n\n/Users/craig/Dropbox/Developer/Public/dolce/node_modules/crema/project.sublime-workspace:\n   17  		},\n   18  		{\n   19: 			\"contents\": \" \\n\\n## Example\\n\\n```javascript\\nvar routes = crema('request -method=GET OR -method=POST authorize -> login');\\n```\\n\\nOutput:\\n\\n```javascript\\n[\\n  {\\n    \\\"type\\\": \\\"request\\\",\\n    \\\"tags\\\": {\\n      \\\"method\\\": \\\"get\\\"\\n    },\\n    \\\"channel\\\": {\\n      \\\"value\\\": \\\"login\\\",\\n      \\\"paths\\\": [\\n        {\\n          \\\"value\\\": \\\"login\\\",\\n          \\\"param\\\": false\\n        }\\n      ]\\n    },\\n    \\\"thru\\\": {\\n      \\\"channel\\\": {\\n        \\\"value\\\": \\\"authorize\\\",\\n        \\\"paths\\\": [\\n          {\\n            \\\"value\\\": \\\"authorize\\\",\\n            \\\"param\\\": false\\n          }\\n        ]\\n      }\\n    }\\n  }\\n]\\n```\\n\\n## Syntax\\n\\n```javascript\\ncrema('type -tag=value route OR route2');\\n```\\n\\n## Custom Grammar \\n\\n\\n## Use Cases\\n\\n- [beanpole](beanpole)\\n- [dolce](dolce)\\n\",\n   20  			\"file\": \"README.md\",\n   21  			\"file_size\": 682,\n\n/Users/craig/Dropbox/Developer/Public/dolce/node_modules/crema/README.md:\n   16        \"method\": \"get\"\n   17      },\n   18:     \"channel\": {\n   19        \"value\": \"login\",\n   20        \"paths\": [\n   ..\n   26      },\n   27      \"thru\": {\n   28:       \"channel\": {\n   29          \"value\": \"authorize\",\n   30          \"paths\": [\n\n/Users/craig/Dropbox/Developer/Public/dolce/node_modules/crema/src/grammar.peg:\n   25  \n   26  orChannel\n   27:   =  channel (or channel)* \n   28  \n   29: channel \n   30    =  ch: (\"(\" path* \")\") { return ch[1]; }\n   31    / path* \n\n/Users/craig/Dropbox/Developer/Public/dolce/node_modules/ebnf-diagram/node_modules/canvas/History.md:\n  150    * Added arcTo(). Closes #11\n  151    * Added c color parser, _./examples/ray.js_ is now twice as fast \n  152:   * Fixed `putImageData()` bug messing up rgba channels\n  153  \n  154  0.2.1 / 2010-11-19 \n\n/Users/craig/Dropbox/Developer/Public/dolce/node_modules/ebnf-diagram/node_modules/canvas/src/CanvasRenderingContext2d.cc:\n  349    unsigned char* src = cairo_image_surface_get_data( surface );\n  350    double mul=1.f/((radius*2)*(radius*2));\n  351:   int channel;\n  352    \n  353    // The number of times to perform the averaging. According to wikipedia,\n  ...\n  357  \n  358    for ( iteration = 0; iteration < MAX_ITERATIONS; iteration++ ) {\n  359:       for( channel = 0; channel < 4; channel++ ) {\n  360            int x,y;\n  361  \n  ...\n  364            unsigned* pre = precalc;\n  365  \n  366:           pix += channel;\n  367            for (y=0;y<height;y++) {\n  368                for (x=0;x<width;x++) {\n  ...\n  377  \n  378            // blur step.\n  379:           pix = src + (int)radius * width * 4 + (int)radius * 4 + channel;\n  380            for (y=radius;y<height-radius;y++) {\n  381                for (x=radius;x<width-radius;x++) {\n\n/Users/craig/Dropbox/Developer/Public/dolce/node_modules/ebnf-diagram/node_modules/canvas/src/color.cc:\n   17  \n   18  /*\n   19:  * Parse color channel value\n   20   */\n   21  \n\n/Users/craig/Dropbox/Developer/Public/dolce/node_modules/sift/node_modules/express/node_modules/mime/types/mime.types:\n  898  # application/vnd.uplanet.cacheop\n  899  # application/vnd.uplanet.cacheop-wbxml\n  900: # application/vnd.uplanet.channel\n  901: # application/vnd.uplanet.channel-wbxml\n  902  # application/vnd.uplanet.list\n  903  # application/vnd.uplanet.list-wbxml\n\n/Users/craig/Dropbox/Developer/Public/dolce/node_modules/sift/node_modules/underscore/index.html:\n  115        You can report bugs and discuss features on the\n  116        <a href=\"http://github.com/documentcloud/underscore/issues\">issues page</a>,\n  117:       on Freenode in the <tt>#documentcloud</tt> channel,\n  118        or send tweets to <a href=\"http://twitter.com/documentcloud\">@documentcloud</a>.\n  119      </p>\n\n32 matches across 12 files\n",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 5543,
+				"buffer_size": 0,
 				"line_ending": "Unix",
 				"name": "Find Results",
 				"scratch": true
@@ -97,7 +105,7 @@
 			"file": "test/remove-test.js",
 			"settings":
 			{
-				"buffer_size": 748,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -161,7 +169,7 @@
 			"file": "test/tag-filter-test.js",
 			"settings":
 			{
-				"buffer_size": 828,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -177,7 +185,7 @@
 			"file": "test/greedy-endpoint-test.js",
 			"settings":
 			{
-				"buffer_size": 516,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -201,7 +209,7 @@
 			"file": "test/contains-test.js",
 			"settings":
 			{
-				"buffer_size": 815,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -222,13 +230,13 @@
 			}
 		},
 		{
-			"contents": "var vows = require('vows'),\ndolce = require('../'),\nassert = require('assert'),\nflatten = require('./flattenCollections');\n\n\nvows.describe('Param-based routes').addBatch({\n	\n	'A mix of parameterized routes': {\n		\n		topic: function() {\n			var collection = require('./test-helper').collection({\n				'a/b':1,\n				':a/b': 1,\n				'a/:b': 1,\n				':a/:b': 1,\n				'a/b/c':1,\n				':a/b/c':1,\n				'a/:b/c':1,\n				'a/b/:c':1,\n				':a/:b/:c':1\n\n			});\n\n			return collection;\n		},\n\n		'has a/b': function(topic) {\n			assert.equal(flatten(topic.get('a/b')).length, 1); //1 \n		},\n\n		'has aa/b': function(topic) {\n			assert.equal(flatten(topic.get('aa/b')).length, 1); //1 \n		},\n\n		'has a/bb': function(topic) {\n			assert.equal(flatten(topic.get('a/bb')).length, 1); //1 \n		},\n\n		'has aa/bb': function(topic) {\n			assert.equal(flatten(topic.get('aa/bb')).length, 1); //1 \n		}\n\n	}\n}).export(module);",
+			"contents": "",
 			"file": "test/param-test.js",
 			"file_size": 881,
 			"file_write_time": 1327946772000000,
 			"settings":
 			{
-				"buffer_size": 881,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -257,13 +265,13 @@
 			}
 		},
 		{
-			"contents": "var dolce = require('../');\nrequire('colors'),\nBenchmark = require('benchmark');\n\nvar suite = new Benchmark.Suite,\ncollection = dolce.collection();\n\n\ncollection.add({\n\n	/**\n	 */\n\n	'thruAgain -> thru': 1,\n\n	/**\n	 */\n\n	'thruAgain': 1,\n\n	/**\n	 */\n\n	'hello/**': 1,\n\n	/**\n	 */\n	\n	'hello/:world/**': 1,\n\n	/**\n	 */\n\n	'thru -> hello/:world/test': 1,\n\n\n	/**\n	 */\n\n\n	'a': 1,\n\n\n	/**\n	 */\n\n	'a/**': 1,\n\n	/**\n	 */\n\n	'a -> b': 1,\n\n	/**\n	 */\n\n	'b/**': 1,\n\n	/**\n	 */\n\n	'b -> c': 1,\n\n	/**\n	 */\n\n	'c/**': 1,\n\n	/**\n	 */\n\n	'a -> b -> c -> d': 1,\n\n\n	/**\n	 */\n\n	'-method=POST aa':1,\n\n	/**\n	 */\n\n	'-method=GET aa':1,\n\n	/**\n	 */\n\n	'-method=POST aa -> bb': 1,\n\n	/**\n	 */\n\n	'-method=GET aa -> bb': 1,\n\n	/**\n	 */\n\n	'-method=POST bb -> cc': 1,\n\n	/**\n	 */\n\n	'-method=GET bb -> cc': 1\n});\n\n\nsuite.add('thruAgain -> thru -> hello/** -> hello/:world/** -> hello/:world/test', function() {\n\n	collection.get('hello/world/test');\n\n}).\nadd('a/** -> a -> b/** -> a/** -> a -> b -> c/** -> b/** -> a/** -> a -> b -> c -> d', function() {\n\n	collection.get('d');\n\n}).\nadd('-method=POST aa -> bb -> cc', function() {\n	\n	collection.get('cc', { method: 'POST' });\n\n}).\non('cycle', function(event, bench) {\n	console.log(String(bench));\n}).\non('complete', function() {\n}).\nrun({'async':true});\n\n\n\n",
+			"contents": "",
 			"file": "tests/benchmark.js",
 			"file_size": 1252,
 			"file_write_time": 1327040145000000,
 			"settings":
 			{
-				"buffer_size": 1252,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -279,7 +287,7 @@
 			"file": "lib/tree.js",
 			"settings":
 			{
-				"buffer_size": 3961,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -295,18 +303,18 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 478,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "e",
+			"contents": "",
 			"file": "/tmp/subl stdin 0p3GVx.txt",
 			"file_size": 0,
 			"file_write_time": 1329888602000000,
 			"settings":
 			{
-				"buffer_size": 1,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -330,7 +338,7 @@
 			"file": "lib/index.js",
 			"settings":
 			{
-				"buffer_size": 45,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -359,13 +367,13 @@
 			}
 		},
 		{
-			"contents": "var dolce = require('../lib'),\ncollection = dolce.collection();\n\n\ncollection.add({\n	\n	'signup/*': function(ops) {\n		\n	},\n\n	'signup': function(ops) {\n		\n	}\n});\n\n\ncollection.get('signup');",
+			"contents": "",
 			"file": "examples/timeout.js",
 			"file_size": 186,
 			"file_write_time": 1327008802000000,
 			"settings":
 			{
-				"buffer_size": 186,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -389,7 +397,7 @@
 			"file": "node_modules/sift/sift.js",
 			"settings":
 			{
-				"buffer_size": 6314,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -397,7 +405,7 @@
 			"file": "test/explicit-test.js",
 			"settings":
 			{
-				"buffer_size": 1194,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -405,7 +413,7 @@
 			"file": "test/implicit-test.js",
 			"settings":
 			{
-				"buffer_size": 1414,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -413,7 +421,7 @@
 			"file": "test/extends-test.js",
 			"settings":
 			{
-				"buffer_size": 821,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -437,7 +445,7 @@
 			"file": "test/flattenCollections.js",
 			"settings":
 			{
-				"buffer_size": 95,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -445,7 +453,7 @@
 			"file": ".travis.yml",
 			"settings":
 			{
-				"buffer_size": 95,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -453,7 +461,7 @@
 			"file": "test/filter-test.js",
 			"settings":
 			{
-				"buffer_size": 698,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -483,7 +491,7 @@
 			"file": "test/greedy-test.js",
 			"settings":
 			{
-				"buffer_size": 1657,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -491,7 +499,7 @@
 			"file": "examples/overview.js",
 			"settings":
 			{
-				"buffer_size": 1442,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -499,7 +507,7 @@
 			"file": "test/benchmark.js",
 			"settings":
 			{
-				"buffer_size": 1258,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -507,7 +515,7 @@
 			"file": "build/syntax.ebnf",
 			"settings":
 			{
-				"buffer_size": 163,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -523,7 +531,7 @@
 			"file": "test/test-helper.js",
 			"settings":
 			{
-				"buffer_size": 593,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +547,7 @@
 			"file": ".cupboard",
 			"settings":
 			{
-				"buffer_size": 133,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -781,7 +789,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 34,
 			"sheets":
 			[
 				{
@@ -815,15 +823,15 @@
 					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 3238,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								452,
-								452
+								0,
+								0
 							]
 						],
 						"settings":
@@ -843,15 +851,15 @@
 					"file": "rules.md",
 					"settings":
 					{
-						"buffer_size": 47,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								47,
-								47
+								0,
+								0
 							]
 						],
 						"settings":
@@ -921,15 +929,15 @@
 					"file": "lib/collection.js",
 					"settings":
 					{
-						"buffer_size": 10269,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7327,
-								7327
+								0,
+								0
 							]
 						],
 						"settings":
@@ -938,14 +946,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5731.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/tmp/subl stdin H1VdbL.txt",
+					"file": "/tmp/subl stdin 211LM8.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -971,147 +979,37 @@
 				},
 				{
 					"buffer": 7,
+					"file": "/tmp/subl stdin H1VdbL.txt",
 					"settings":
 					{
-						"buffer_size": 5543,
+						"buffer_size": 0,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										142,
-										149
-									],
-									[
-										238,
-										245
-									],
-									[
-										451,
-										458
-									],
-									[
-										500,
-										507
-									],
-									[
-										691,
-										698
-									],
-									[
-										706,
-										713
-									],
-									[
-										778,
-										785
-									],
-									[
-										936,
-										943
-									],
-									[
-										1032,
-										1039
-									],
-									[
-										1245,
-										1252
-									],
-									[
-										1294,
-										1301
-									],
-									[
-										1477,
-										1484
-									],
-									[
-										1600,
-										1607
-									],
-									[
-										1655,
-										1662
-									],
-									[
-										2091,
-										2098
-									],
-									[
-										2279,
-										2286
-									],
-									[
-										2839,
-										2846
-									],
-									[
-										2961,
-										2968
-									],
-									[
-										3154,
-										3161
-									],
-									[
-										3166,
-										3173
-									],
-									[
-										3192,
-										3199
-									],
-									[
-										3538,
-										3545
-									],
-									[
-										3839,
-										3846
-									],
-									[
-										4046,
-										4053
-									],
-									[
-										4059,
-										4066
-									],
-									[
-										4072,
-										4079
-									],
-									[
-										4200,
-										4207
-									],
-									[
-										4414,
-										4421
-									],
-									[
-										4679,
-										4686
-									],
-									[
-										4953,
-										4960
-									],
-									[
-										4994,
-										5001
-									],
-									[
-										5396,
-										5403
-									]
-								],
-								"scope": ""
-							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
 						},
 						"selection":
 						[
@@ -1137,7 +1035,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "/tmp/subl stdin W57N8o.txt",
 					"settings":
 					{
@@ -1163,19 +1061,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "test/remove-test.js",
 					"settings":
 					{
-						"buffer_size": 748,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								422,
-								422
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1190,7 +1088,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "/tmp/subl stdin 1gq6vU.txt",
 					"settings":
 					{
@@ -1216,7 +1114,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "/tmp/subl stdin j5i7Tg.txt",
 					"settings":
 					{
@@ -1242,7 +1140,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "/tmp/subl stdin DIgrf8.txt",
 					"settings":
 					{
@@ -1268,7 +1166,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "/tmp/subl stdin epcqXf.txt",
 					"settings":
 					{
@@ -1294,7 +1192,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "/tmp/subl stdin 9fmw65.txt",
 					"settings":
 					{
@@ -1320,7 +1218,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "/tmp/subl stdin JnX4kb.txt",
 					"settings":
 					{
@@ -1346,7 +1244,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "/tmp/subl stdin 5wLUuA.txt",
 					"settings":
 					{
@@ -1372,19 +1270,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"file": "test/tag-filter-test.js",
 					"settings":
 					{
-						"buffer_size": 828,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								397,
-								397
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1399,7 +1297,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "test/find.test.js",
 					"settings":
 					{
@@ -1425,19 +1323,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "test/greedy-endpoint-test.js",
 					"settings":
 					{
-						"buffer_size": 516,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								362,
-								362
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1452,7 +1350,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "/tmp/subl stdin 77su7E.txt",
 					"settings":
 					{
@@ -1478,7 +1376,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"file": "/tmp/subl stdin F5tvvQ.txt",
 					"settings":
 					{
@@ -1504,19 +1402,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "test/contains-test.js",
 					"settings":
 					{
-						"buffer_size": 815,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								273,
-								273
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1531,7 +1429,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "/tmp/subl stdin tQtbQu.txt",
 					"settings":
 					{
@@ -1557,7 +1455,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"file": "/tmp/subl stdin l1WIfe.txt",
 					"settings":
 					{
@@ -1583,19 +1481,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 26,
 					"file": "test/param-test.js",
 					"settings":
 					{
-						"buffer_size": 881,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								558,
-								499
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1610,7 +1508,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 27,
 					"file": "/tmp/subl stdin HNAKDT.txt",
 					"settings":
 					{
@@ -1636,7 +1534,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "lib/router.js",
 					"settings":
 					{
@@ -1662,7 +1560,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "tests/explicit-test.js",
 					"settings":
 					{
@@ -1688,19 +1586,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "tests/benchmark.js",
 					"settings":
 					{
-						"buffer_size": 1252,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1077,
-								1077
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1709,13 +1607,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1114.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1741,19 +1639,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "lib/tree.js",
 					"settings":
 					{
-						"buffer_size": 3961,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3184,
-								3184
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1768,7 +1666,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "/tmp/subl stdin E5kju8.txt",
 					"settings":
 					{
@@ -1794,11 +1692,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 478,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -1822,34 +1720,8 @@
 					"type": "text"
 				},
 				{
-					"buffer": 34,
-					"file": "/tmp/subl stdin 0p3GVx.txt",
-					"settings":
-					{
-						"buffer_size": 1,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1,
-								1
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 35,
-					"file": "/tmp/subl stdin voKAmo.txt",
+					"file": "/tmp/subl stdin 0p3GVx.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1875,7 +1747,7 @@
 				},
 				{
 					"buffer": 36,
-					"file": "/tmp/subl stdin 3x9YDO.txt",
+					"file": "/tmp/subl stdin voKAmo.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1901,18 +1773,44 @@
 				},
 				{
 					"buffer": 37,
-					"file": "lib/index.js",
+					"file": "/tmp/subl stdin 3x9YDO.txt",
 					"settings":
 					{
-						"buffer_size": 45,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								45,
-								45
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"file": "lib/index.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1927,7 +1825,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 38,
+					"buffer": 39,
 					"file": "/tmp/subl stdin 2yODJT.txt",
 					"settings":
 					{
@@ -1953,7 +1851,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 39,
+					"buffer": 40,
 					"file": "lib/disposable.js",
 					"settings":
 					{
@@ -1980,7 +1878,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 40,
+					"buffer": 41,
 					"file": "/tmp/subl stdin H5tzry.txt",
 					"settings":
 					{
@@ -2006,11 +1904,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 41,
+					"buffer": 42,
 					"file": "examples/timeout.js",
 					"settings":
 					{
-						"buffer_size": 186,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -2018,7 +1916,7 @@
 						[
 							[
 								0,
-								186
+								0
 							]
 						],
 						"settings":
@@ -2033,7 +1931,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 42,
+					"buffer": 43,
 					"file": "examples/signup.js",
 					"settings":
 					{
@@ -2059,7 +1957,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 43,
+					"buffer": 44,
 					"file": "examples/funky-routes.js",
 					"settings":
 					{
@@ -2086,11 +1984,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 44,
+					"buffer": 45,
 					"file": "node_modules/sift/sift.js",
 					"settings":
 					{
-						"buffer_size": 6314,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -2107,33 +2005,6 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4020.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 45,
-					"file": "test/explicit-test.js",
-					"settings":
-					{
-						"buffer_size": 1194,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								607,
-								607
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -2141,18 +2012,18 @@
 				},
 				{
 					"buffer": 46,
-					"file": "test/implicit-test.js",
+					"file": "test/explicit-test.js",
 					"settings":
 					{
-						"buffer_size": 1414,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								580,
-								580
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2168,18 +2039,18 @@
 				},
 				{
 					"buffer": 47,
-					"file": "test/extends-test.js",
+					"file": "test/implicit-test.js",
 					"settings":
 					{
-						"buffer_size": 821,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								722,
-								722
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2195,6 +2066,33 @@
 				},
 				{
 					"buffer": 48,
+					"file": "test/extends-test.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 49,
 					"file": "/tmp/subl stdin aoC5RM.txt",
 					"settings":
 					{
@@ -2220,7 +2118,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 49,
+					"buffer": 50,
 					"file": "/tmp/subl stdin Dp5MHe.txt",
 					"settings":
 					{
@@ -2246,19 +2144,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 50,
+					"buffer": 51,
 					"file": "test/flattenCollections.js",
 					"settings":
 					{
-						"buffer_size": 95,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								36,
-								36
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2272,19 +2170,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 51,
+					"buffer": 52,
 					"file": ".travis.yml",
 					"settings":
 					{
-						"buffer_size": 95,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								42,
-								42
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2298,19 +2196,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 52,
+					"buffer": 53,
 					"file": "test/filter-test.js",
 					"settings":
 					{
-						"buffer_size": 698,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								502,
-								479
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2325,7 +2223,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 53,
+					"buffer": 54,
 					"file": "/tmp/subl stdin q4m2nU.txt",
 					"settings":
 					{
@@ -2342,32 +2240,6 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 54,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -2404,18 +2276,44 @@
 				},
 				{
 					"buffer": 56,
-					"file": "test/greedy-test.js",
 					"settings":
 					{
-						"buffer_size": 1657,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1543,
-								1543
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/craig/Dropbox/Developer/Public/dolce/test",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 57,
+					"file": "test/greedy-test.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2424,25 +2322,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 212.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 57,
+					"buffer": 58,
 					"file": "examples/overview.js",
 					"settings":
 					{
-						"buffer_size": 1442,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1442,
-								1442
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2456,19 +2354,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 58,
+					"buffer": 59,
 					"file": "test/benchmark.js",
 					"settings":
 					{
-						"buffer_size": 1258,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1170,
-								1178
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2483,34 +2381,8 @@
 					"type": "text"
 				},
 				{
-					"buffer": 59,
-					"file": "build/syntax.ebnf",
-					"settings":
-					{
-						"buffer_size": 163,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								158,
-								158
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 60,
-					"file": "/tmp/subl stdin ODgU9m.txt",
+					"file": "build/syntax.ebnf",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -2536,18 +2408,44 @@
 				},
 				{
 					"buffer": 61,
-					"file": "test/test-helper.js",
+					"file": "/tmp/subl stdin ODgU9m.txt",
 					"settings":
 					{
-						"buffer_size": 593,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								559,
-								559
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 62,
+					"file": "test/test-helper.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2562,7 +2460,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 62,
+					"buffer": 63,
 					"file": "/tmp/subl stdin Y5DX8L.txt",
 					"settings":
 					{
@@ -2588,19 +2486,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 63,
+					"buffer": 64,
 					"file": ".cupboard",
 					"settings":
 					{
-						"buffer_size": 133,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								82,
-								82
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2614,7 +2512,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 64,
+					"buffer": 65,
 					"file": "/tmp/subl stdin NIyr0i.txt",
 					"settings":
 					{
