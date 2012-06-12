@@ -9,11 +9,11 @@ vows.describe('Regexp Routes').addBatch({
 		
 		topic: function() {
 			var collection = require('./test-helper').collection({
-				
-				'(\\w+.js)':1,
-				'(\\w+.css)': 1,
-				'-a (\\w+.html)': 3,
-				'(\\w+.html)': 1,
+				':file': 1,
+				':file(\\w+.js)':1,
+				':file(\\w+.css)': 1,
+				'-a :file(\\w+.html)': 3,
+				':file(\\w+.html)': 1,
 				'b.html': 1,
 				'a/:pluck(\\w+\.(css|js))/hello': 1,
 			});
